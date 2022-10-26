@@ -1,61 +1,61 @@
-Country,Language,Done,data this month,analysed,Comments,Source
-IMF,,1,1,1,,https://data.imf.org/?sk=4FFB52B2-3653-409A-B471-D47B46D904B5
-Algeria,French,1,1,1,,https://www.ons.dz/spip.php?rubrique124
-Angola,Portuguese,0,,,Is it worth the effort for 1 line of data?,https://www.ine.gov.ao/
-Burkina Faso,French,1,1,1,,http://www.insd.bf/index.php/publications?id=45
-Burundi,French,0,,,tables really messed up,https://www.isteebu.bi/indices-des-prix-a-la-consommation/
-Chad,French,1,1,1,,https://www.inseed.td/
-Eswatini,,0,,,No data,https://www.centralbank.org.sz/
-Ethiopia,,1,1,1,,https://www.statsethiopia.gov.et/our-survey-reports/
-Gabon,French,1,1,1,,https://statgabon.ga/home/
-Gambia,English,1,0,,no new data – xlsx files don’t have what we need,https://www.gbosdata.org/downloads/cpi-2022
-Ghana,,1,1,1,,https://statsghana.gov.gh/nationalaccount_macros.php?Stats=MTE2MTIyMjQ5Ni41NjY=/webstats/7163p83s71
-Kenya,,1,1,1,,https://www.knbs.or.ke/news-and-events/
-Liberia,,1,0,,no new data,https://www.cbl.org.lr/publications/document-type/liberia-financial-statistical-reports
-Malawi,,0,,,No data,http://www.nsomalawi.mw/index.php?option=com_content&view=article&id=186&Itemid=37
-Mozambique,Portuguese,1,1,1,,http://www.ine.gov.mz/estatisticas/estatisticas-economicas/indice-de-preco-no-consumidor/quadros/nacional
-Namibia,,1,1,1,,https://nsa.org.na/page/publications/
-Niger,French,1,1,1,,https://www.stat-niger.org/?page_id=1558
-Nigeria,,0,,,"categories are all items, al items less food, all items less food and energy. These are not the categories we use.",https://www.cbn.gov.ng/rates/inflrates.asp
-Rwanda,,1,1,1,,"https://www.statistics.gov.rw/statistical-publications/subject/consumer-price-index-%28cpi%29/reports#:~:text=Consumer%20Price%20Index%20(CPI)%20%2D,August%202021%20was%207.3%20percent."
-Senegal,French,2,0,,no new data,http://www.ansd.sn/index.php?option=com_ansd&view=titrepublication&id=6
-Sierra Leone,,1,1,1,,https://www.statistics.sl/index.php/cpi.html
-South Africa,,1,1,1,,https://www.statssa.gov.za/?cat=33
-Sudan,,0,,,No data,https://cbos.gov.sd/en/periodicals-publications?field_publication_type_tid_i18n=44
-Tanzania,,1,1,1,,https://www.nbs.go.tz/index.php/en/consumer-price-index-cpi
-Togo,French,2,1,1,,https://inseed.tg/inflation-prix/
-Tunisia,English,2,0,,up to date,http://www.ins.tn/en/statistiques/90
-Uganda,,1,1,1,,https://www.ubos.org/explore-statistics/30/
-Zambia,,2,1,1,,https://www.zamstats.gov.zm/publications/
-Zimbabwe,,0,,,No data,https://www.zimstat.co.zw/
-,,,,,,
-total,,16,,,,
-,,,,,,
-,,2 is new method,,,,
-,,,,,,
-Benin,,,,,,
-Botswana,,,,,,
-Cameroon,,,,,,
-Cape Verde,,,,,,
-Central African Republic,,,,,,
-Comoros,,,,,,
-Republic of Congo,,,,,,
-Democratic Republic of Congo,,,,,,
-Djibouti,,,,,,
-Egypt,,,,,,
-Equatorial Guinea,,,,,,
-Guinea,,,,,,
-Guinea-Bissau,,,,,,
-Côte d'Ivoire,,,,,,
-Lesotho,,,,,,
-Libya,,,,,,
-Madagascar,,,,,,
-,,,,,,
-Mali,,,,,,
-Mauritania,,,,,,
-Mauritius,,,,,,
-Morocco,,,,,,
-Rwanda,,,,,,
-Sao Tome and Principe,,,,,,
-Seychelles,,,,,,
-South Sudan,,,,,,
+Country,Language,Done,data this month,analysed,Uploaded,Comments,Source
+IMF,,1,1,1,,,https://data.imf.org/?sk=4FFB52B2-3653-409A-B471-D47B46D904B5
+Algeria,French,1,1,1,1,,https://www.ons.dz/spip.php?rubrique124
+Angola,Portuguese,0,,,,Is it worth the effort for 1 line of data?,https://www.ine.gov.ao/
+Burkina Faso,French,1,1,1,1,,http://www.insd.bf/index.php/publications?id=45
+Burundi,French,0,,,,tables really messed up,https://www.isteebu.bi/indices-des-prix-a-la-consommation/
+Chad,French,1,1,1,1,,https://www.inseed.td/
+Eswatini,,0,,,,No data,https://www.centralbank.org.sz/
+Ethiopia,,1,1,1,1,,https://www.statsethiopia.gov.et/our-survey-reports/
+Gabon,French,1,1,1,1,,https://statgabon.ga/home/
+Gambia,English,1,0,,1,no new data – xlsx files don’t have what we need,https://www.gbosdata.org/downloads/cpi-2022
+Ghana,,1,1,1,1,,https://statsghana.gov.gh/nationalaccount_macros.php?Stats=MTE2MTIyMjQ5Ni41NjY=/webstats/7163p83s71
+Kenya,,1,1,1,1,,https://www.knbs.or.ke/news-and-events/
+Liberia,,1,0,,1,no new data,https://www.cbl.org.lr/publications/document-type/liberia-financial-statistical-reports
+Malawi,,0,,,,No data,http://www.nsomalawi.mw/index.php?option=com_content&view=article&id=186&Itemid=37
+Mozambique,Portuguese,1,1,1,1,,http://www.ine.gov.mz/estatisticas/estatisticas-economicas/indice-de-preco-no-consumidor/quadros/nacional
+Namibia,,1,1,1,1,,https://nsa.org.na/page/publications/
+Niger,French,1,1,1,1,,https://www.stat-niger.org/?page_id=1558
+Nigeria,,0,,,,"categories are all items, al items less food, all items less food and energy. These are not the categories we use.",https://www.cbn.gov.ng/rates/inflrates.asp
+Rwanda,,1,1,1,1,,"https://www.statistics.gov.rw/statistical-publications/subject/consumer-price-index-%28cpi%29/reports#:~:text=Consumer%20Price%20Index%20(CPI)%20%2D,August%202021%20was%207.3%20percent."
+Senegal,French,2,0,,1,no new data,http://www.ansd.sn/index.php?option=com_ansd&view=titrepublication&id=6
+Sierra Leone,,1,1,1,1,,https://www.statistics.sl/index.php/cpi.html
+South Africa,,1,1,1,1,,https://www.statssa.gov.za/?cat=33
+Sudan,,0,,,,No data,https://cbos.gov.sd/en/periodicals-publications?field_publication_type_tid_i18n=44
+Tanzania,,1,1,1,1,,https://www.nbs.go.tz/index.php/en/consumer-price-index-cpi
+Togo,French,2,1,1,1,,https://inseed.tg/inflation-prix/
+Tunisia,English,2,0,,1,up to date,http://www.ins.tn/en/statistiques/90
+Uganda,,1,1,1,1,,https://www.ubos.org/explore-statistics/30/
+Zambia,,2,1,1,1,,https://www.zamstats.gov.zm/publications/
+Zimbabwe,,0,,,,No data,https://www.zimstat.co.zw/
+,,,,,,,
+total,,16,,,,,
+,,,,,,,
+,,2 is new method,,,,,
+,,,,,,,
+Benin,,,,,,,
+Botswana,,,,,,,
+Cameroon,,,,,,,
+Cape Verde,,,,,,,
+Central African Republic,,,,,,,
+Comoros,,,,,,,
+Republic of Congo,,,,,,,
+Democratic Republic of Congo,,,,,,,
+Djibouti,,,,,,,
+Egypt,,,,,,,
+Equatorial Guinea,,,,,,,
+Guinea,,,,,,,
+Guinea-Bissau,,,,,,,
+Côte d'Ivoire,,,,,,,
+Lesotho,,,,,,,
+Libya,,,,,,,
+Madagascar,,,,,,,
+,,,,,,,
+Mali,,,,,,,
+Mauritania,,,,,,,
+Mauritius,,,,,,,
+Morocco,,,,,,,
+Rwanda,,,,,,,
+Sao Tome and Principe,,,,,,,
+Seychelles,,,,,,,
+South Sudan,,,,,,,
