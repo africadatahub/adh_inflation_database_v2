@@ -1,0 +1,2 @@
+./data/mozambique/raw/IPCMocambique_Quadros_Agosto_2022.xlsx
+./data/mozambique/raw/IPCMocambique_Quadros_Julho_2022.xlsx

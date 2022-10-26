@@ -1,0 +1,3 @@
+./data/algeria/raw/i.ipc-aout_2022.pdf
+./data/algeria/raw/i.ipc_juillet_2022.pdf
+./data/algeria/raw/i.ipc_juin_2022.pdf

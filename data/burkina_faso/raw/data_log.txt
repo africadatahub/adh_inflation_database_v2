@@ -1,0 +1,11 @@
+./data/burkina_faso/raw/NOTE IHPC AOUT 2022.pdf
+./data/burkina_faso/raw/NOTE IHPC AVRIL 2022.pdf
+./data/burkina_faso/raw/NOTE IHPC FEVRIER 2022.pdf
+./data/burkina_faso/raw/NOTE IHPC JANVIER 2022.pdf
+./data/burkina_faso/raw/NOTE IHPC JUIllET 2022.pdf
+./data/burkina_faso/raw/NOTE IHPC JUIN 2022.pdf
+./data/burkina_faso/raw/NOTE IHPC MAI 2022.pdf
+./data/burkina_faso/raw/NOTE IHPC MARS 2022 .pdf
+./data/burkina_faso/raw/NOTE IHPC AOUT 2022.pdf
+./data/burkina_faso/raw/NOTE IHPC AOUT 2022.pdf
+./data/burkina_faso/raw/NOTE IHPC AOUT 2022.pdf

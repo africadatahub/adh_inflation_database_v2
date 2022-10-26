@@ -1,0 +1,27 @@
+Unnamed: 0,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6
+,,,,Indices des mois de,,Variation en %
+,Libellé,Pondé,janv-21,oct-21 nov-21 déc-21,janv-22,/1mois /3mois /12mois
+,,ration,,,,
+,INDICE GLOBAL,10000,"107,4","111,6 111,6 113,8","115,4","1,5 3,4 7,5"
+I,Produits alimentaires et boissons non alcoolisées,3287,"113,1","123,7 123,2 129,1","132,1","2,3 6,8 16,8"
+,Produits alimentaires,3067,"113,6","124,8 124,3 130,5","133,8","2,5 7,3 17,8"
+,dont:  Pains et céréales,911,"107,6","118,7 120,6 130,8","131,5","0,6 10,9 22,2"
+,Viande,308,"117,3","126,2 125,9 127,5","129,2","1,3 2,4 10,1"
+,Poisson et fruits de mer,459,"126,6","137,4 134,4 135,9","138,7","2,1 1,0 9,6"
+,Huiles et graisses,160,"118,3","136,6 146,2 149,3","144,7","-3,1 5,9 22,3"
+,Légumes,753,"109,4","127,4 125,5 132,3","138,4","4,6 8,7 26,5"
+,Tubercules et plantains,153,"106,5","123,0 127,6 135,1","134,4","-0,5 9,3 26,1"
+,"Sel, épices, sauces et produits alimentaires n.d.a.",157,"107,7","104,7 109,2 113,3","121,1","6,9 15,7 12,4"
+II,"Boissons alcoolisées, tabacs et stupéfiants",93,"107,4","110,1 105,9 109,0","108,5","-0,4 -1,4 1,0"
+III,Articles d'habillement et chaussures,839,"107,5","108,0 108,0 108,2","110,9","2,4 2,7 3,1"
+IV,"Logement, eau, gaz, électricité et autres combustibles",1203,"100,4","100,4 101,3 103,2","105,1","1,8 4,7 4,7"
+,"Meubles, articles de ménage et entretien courant du",,,,,
+V,,278,"110,6","111,4 111,5 111,5","112,8","1,2 1,3 2,0"
+,foyer,,,,,
+VI,Santé,370,"103,7","103,6 103,7 103,4","103,1","-0,3 -0,5 -0,6"
+VII,Transports,941,"90,3","95,2 95,3 95,2","95,5","0,4 0,4 5,8"
+VIII,Communication,588,"101,8","101,8 101,8 101,8","101,8","-0,1 -0,1 0,0"
+IX,Loisirs et culture,236,"102,1","104,8 104,8 104,8","107,2","2,3 2,3 5,0"
+X,Enseignement,201,"112,5","107,9 108,1 108,1","108,4","0,3 0,5 -3,6"
+XI,Restaurants et hôtels,1495,"113,8","115,1 115,0 115,0","115,7","0,7 0,5 1,6"
+XII,Biens et services divers,469,"108,0","109,0 108,9 109,1","110,0","0,8 0,9 1,8"

@@ -1,0 +1,9 @@
+./data/senegal/raw/137-FLASH IHPC_SEPT_2022-obs_DSECN.pdf
+./data/senegal/raw/IHPC_01_22 1.pdf
+./data/senegal/raw/IHPC_02_22_Valide.pdf
+./data/senegal/raw/IHPC_03_22.pdf
+./data/senegal/raw/IHPC_04_22.pdf
+./data/senegal/raw/IHPC_05_22_Valide 002.pdf
+./data/senegal/raw/IHPC_06_221.pdf
+./data/senegal/raw/IHPC_07_22.pdf
+./data/senegal/raw/IHPC_08_22 2.pdf

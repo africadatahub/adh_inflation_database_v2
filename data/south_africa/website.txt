@@ -1,0 +1,7 @@
+https://www.statssa.gov.za/?cat=33
+
+select publications > statistical publications
+select latest CPI report, download additional tables
+data:
+https://www.statssa.gov.za/?page_id=1859
+https://www.statssa.gov.za/publications/P0141/P0141July2022_Tables.pdf

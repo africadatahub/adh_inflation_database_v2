@@ -1,0 +1,3 @@
+./data/kenya/raw/August-2022-CPI-.pdf
+./data/kenya/raw/July-2022-CPI-.pdf
+./data/kenya/raw/June 2022 - CPI .pdf

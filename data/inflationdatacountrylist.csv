@@ -1,0 +1,60 @@
+_id,Region/Country,Geography,Name,Link,Notes,Social media,Breakdown by COICOP category?
+1,Global,Global,World Bank Data Portal,https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG,Annual updates only,,N
+2,Africa,Global,Africa Development Bank/Open Data for Africa,opendataforafrica.org,Not  regularly updated,,
+3,Global,Global,International Monetary Fund,https://data.imf.org/?sk=4FFB52B2-3653-409A-B471-D47B46D904B5,Data doesn't exactly match national level reports,,Y
+4,Southern Africa,Global,SADC Harmonised CPI Newsletter,https://www.sadc.int/information-services/sadc-statistics,"Website not up to date, but recent newsletters are available on demand",,Y
+5,Southern and Eastern Africa,Global,COMESA Harmonsied CPI data,https://drive.google.com/drive/folders/1OgqNm6gFKMYxeelNaBQ2KQ9sbG6jS23H,Not regularly updated,,Y
+6,Algeria,DZA,Office National des Statistiques,https://www.ons.dz/spip.php?rubrique124,Updated late in month?,,
+7,Angola,AGO,Instituto Nacional de Estatistica,https://www.ine.gov.ao/,Very user friendly site,,Not sure
+8,Benin,BEN,Les statistiques au service de la nation,https://instad.bj/,Monthly press release,,y
+9,Botswana,BWA,Bank of Botswana,https://www.bankofbotswana.bw/botswana-financial-statistics,Monthly Spreadsheet (Look for section 2),,Y
+10,Burkina Faso,BFA,Institut National de la Statistique et de la Demographie,http://www.insd.bf/index.php/publications?id=45,Monthly PDF release,,Y
+11,Burundi,BDI,Institut de Statistiques et d'Etudes Economiques du Burundi,https://www.isteebu.bi/indices-des-prix-a-la-consommation/,Monthly PDF release,,Y
+12,Cameroon,CMR,Institut National de la Statistique,https://ins-cameroun.cm/en/type-de-statistique/statistiques-conjoncturelles/consommation/,PDF release could be quarterly?,,Y
+13,Cape Verde,CPV,Instituto Nacional de Estatistica,https://ine.cv/ipc/,Monthly PDF release,,Y
+14,Central African Republic,CAF,,,,,
+15,Chad,TCD,Institut National de la Statistique du Tchad,https://www.inseed.td/,Ticker on the home page,,N
+16,Comoros,COM,Banque Centrale des Comores,http://www.banque-comores.km/,,,
+17,Congo,COG,,,,,
+18,Democratic Republic of Congo,COD,Banque Centrale du Congo,www.bcc.cd,Monthly PDF,,Y
+19,Djibouti,DJI,Direction de la Statistique et des Etudes Demographiques,http://www.ministere-finances.dj,Doesn't seem to be published regularly,,
+20,Egypt,EGY,CAPMAS,https://www.capmas.gov.eg/,,,
+21,Equatorial Guinea,GNQ,,,,,
+22,Eritrea,ERI,,,,,
+23,eSwatini,SWZ,Central Bank,https://www.centralbank.org.sz/,Not included in monthly PDF every month,,
+24,Ethiopia,ETH,Ethiopia Statistics Service,https://www.statsethiopia.gov.et/our-survey-reports/,Monthly PDF report,https://www.statsethiopia.gov.et/our-survey-reports/,Y
+25,Gabon,GAB,Direction Gnrale des Statistiques du Gabon,https://statgabon.ga/home/,Monthly PDF report (Website down?),,Y
+26,Gambia,GMB,The Gambia Bureau of Statistics,https://www.gbosdata.org/downloads,Monthly XLS sheet,,Y
+27,Ghana,GHA,Ghana Statistical Service,https://statsghana.gov.gh/nationalaccount_macros.php?Stats=MTE2MTIyMjQ5Ni41NjY=/webstats/7163p83s71,Monthly bulletin,,Y
+28,Guinea,GIN,Institut National de la Statistique,https://www.stat-guinee.org/,Monthly PDF,,Y
+29,Guinea-Bissau,GNB,,,,,
+30,Ivory Coast,CIV,Institut National de la Statistique,http://www.ins.ci/,Monthly PDF,,Y
+31,Kenya,KEN,Kenya National Bureau of Statistics,https://www.knbs.or.ke/news-and-events/,"Monthly PDF, potential malware on site?",https://twitter.com/KNBStats,Y
+32,Lesotho,LSO,Lesotho Bureau of Statistics,https://www.bos.gov.ls/Publications.htm,Monthly PDF,,Y
+33,Liberia,LBR,Liberia Central Bank,https://www.cbl.org.lr/publications/document-type/liberia-financial-statistical-reports,,,
+34,Libya,LBY,Bureau of Statistics and Census Libya,http://bsc.ly/?P=5&sec_Id=11&dep_Id=4#178,Monthly RAR file,,
+35,Madagascar,MDG,INSTAT Madagascar,http://instat.mg/,Monthly XLSX sheet,,Y
+36,Malawi,MWI,National Statistical Office of Malawi,http://www.nsomalawi.mw/index.php?option=com_content&view=article&id=186&Itemid=37,Monthly XLSX update,,Y
+37,Mali,MLI,Institut National de la Statistique Mali,https://www.instat-mali.org/fr/publications?category=22,Annual PDF,,Y
+38,Mauritania,MRT,ANSADE,https://ansade.mr/fr/publications/?row=INPC,Monthly PDF,,Y
+39,Mauritius,MUS,Statistics Mauritius,https://statsmauritius.govmu.org/Pages/Statistics/By_Subject/CPI/SB_CPI.aspx,Monthly PDF,,Y
+40,Morocco,MAR,Haut-Commissariat au Plan,https://applications-web.hcp.ma/sip/,Interactive & Press release,,Y
+41,Mozambique,MOZ,Insituto Nacional de Estatistica,http://www.ine.gov.mz/estatisticas/estatisticas-economicas/indice-de-preco-no-consumidor/notas-de-imprensa/mocambique,Monthly PDF,http://twitter.com/INE_mz,Y
+42,Namibia,NAM,Namibia Statistics Agency,https://nsa.org.na/page/publications/,Monthly XLSX sheet (Price Statistics),,Y
+43,Niger,NER,Institut National de la Statistique du Niger,https://www.stat-niger.org/?page_id=1558,No 2022 updates yet,,Y
+44,Nigeria,NGA,Central Bank of Nigeria,https://www.cbn.gov.ng/rates/inflrates.asp,Interactive and XLSX update,,Y
+45,Rwanda,RWA,National Institute of Statistics of Rwanda,https://www.statistics.gov.rw/datasource/169,Monthly PDF and XLSX updates,,Y
+46,Sao Tome and Principe,STP,Banco Central S Tome e Principe,https://bcstp.st/Banco-Central?x=wOgqPO8BlRrdHdPOd1%2BEuA==&&z=MQ9pUZLiR%2BYScEF43ktfRA==,Monthly XLSX update,,N
+47,Senegal,SEN,Agence Nationale de la Statistique et de la Demographie,http://www.ansd.sn/index.php?option=com_ansd&view=titrepublication&id=61,Interactive and PDF update,,N
+48,Seychelles,SYC,National Bureau of Statistics,https://www.nbs.gov.sc/downloads/economic-statistics/consumer-price-index,Monthly PDF updates,,Y
+49,Sierra Leone,SLE,Statistics Sierre Leone,https://www.statistics.sl/index.php/cpi.html,Monthly PDF updates,,Y
+50,Somalia,SOM,Hayadda Istaatistikada Qaranka Soomaaliyaa ,https://www.nbs.gov.so/cpi-graph,Monthly interactive update,,Y
+51,South Africa,ZAF,Statistics South Africa,https://www.statssa.gov.za/?cat=33,Comprehensive monthly release in PDF format,https://twitter.com/StatsSA,Y
+52,South Sudan,SSD,,,,,
+53,Sudan,SDN,Central Bank of Sudan,https://cbos.gov.sd/en/periodicals-publications?field_publication_type_tid_i18n=44,Quarterly PDF update,,N
+54,Tanzania,TZA,National Bureau of Statistics,https://www.nbs.go.tz/index.php/en/consumer-price-index-cpi,Monthly PDF update,,Y
+55,Togo,TGO,Institut National de la Statistique et des Etudes Economiqes et Demographiques,https://inseed.tg/inflation-prix/,Monthly PDF update,,Y
+56,Tunisia,TUN,Statistiques Tunisie,http://www.ins.tn/en/statistiques/90,Monthly interactive and downloads,,Y
+57,Uganda,UGA,UBOS,https://www.ubos.org/explore-statistics/30/,Monthly XLSX,https://twitter.com/StatisticsUg,Y
+58,Zambia,ZMB,Zamstats,https://www.zamstats.gov.zm/publications/,Website down - but Facebook notifications are published,"https://twitter.com/mofnpzambia, https://www.facebook.com/zambiafinanceministry",N
+59,Zimbabwe,ZWE,ZIMSTAT,https://www.zimstat.co.zw/,"Figures are on homepage, not apparent where downloads are",,

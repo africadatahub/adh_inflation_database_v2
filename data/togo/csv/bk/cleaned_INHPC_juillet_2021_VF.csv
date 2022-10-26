@@ -1,0 +1,15 @@
+Indicator.Name,Indicator.Code,2021-07-31
+"Consumer Price Index, All items",PCPI_PC_CP_A_PT,"6,8"
+Food and non-alcoholic beverages,PCPIF_PC_CP_A_PT,"14,5"
+"Alcoholic Beverages, Tobacco, and Narcotics",PCPIFBT_PC_CP_A_PT,"2,9"
+Clothing and footwear,PCPIA_PC_CP_A_PT,"0,1"
+"Housing, Water, Electricity, Gas and Other Fuels",PCPIH_PC_CP_A_PT,"1,6"
+"Furnishings, household equipment and routine household maintenance",PCPIHO_PC_CP_A_PT,"1,4"
+Health,PCPIM_PC_CP_A_PT,"0,1"
+Transport,PCPIT_PC_CP_A_PT,"5,2"
+Communication,PCPIEC_PC_CP_A_PT,"5,5"
+Recreation and culture,PCPIR_PC_CP_A_PT,"1,6"
+Education,PCPIED_PC_CP_A_PT,"1,5"
+Restaurants and hotels,PCPIRE_PC_CP_A_PT,"3,6"
+Insurance and Financial Services,,
+Miscellaneous goods and services,PCPIO_PC_CP_A_PT,"1,6"

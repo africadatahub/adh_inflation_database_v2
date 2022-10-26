@@ -1,0 +1,14 @@
+Indicator.Name,Indicator.Code
+"Consumer Price Index, All items, Percentage change, Previous year",PCPI_PC_CP_A_PT
+"Clothing and footwear, Percentage change, Previous year",PCPIA_PC_CP_A_PT
+"Communication, Percentage change, Previous year",PCPIEC_PC_CP_A_PT
+"Education, Percentage change, Previous year",PCPIED_PC_CP_A_PT
+"Food and non-alcoholic beverages, Percentage change, Previous year",PCPIF_PC_CP_A_PT
+"Alcoholic Beverages, Tobacco, and Narcotics, Percentage change, Previous year",PCPIFBT_PC_CP_A_PT
+"Housing, Water, Electricity, Gas and Other Fuels, Percentage change, Previous year",PCPIH_PC_CP_A_PT
+"Furnishings, household equipment and routine household maintenance, Percentage change, Previous year",PCPIHO_PC_CP_A_PT
+"Health, Percentage change, Previous year",PCPIM_PC_CP_A_PT
+"Miscellaneous goods and services, Percentage change, Previous year",PCPIO_PC_CP_A_PT
+"Recreation and culture, Percentage change, Previous year",PCPIR_PC_CP_A_PT
+"Restaurants and hotels, Percentage change, Previous year",PCPIRE_PC_CP_A_PT
+"Transport, Percentage change, Previous year",PCPIT_PC_CP_A_PT

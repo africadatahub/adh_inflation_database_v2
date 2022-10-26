@@ -1,0 +1,6 @@
+./data/uganda/raw/CPI_Composite_July_2022.xlsx
+./data/uganda/raw/CPI_Composite_June_2022.xlsx
+./data/uganda/raw/CPI_Composite_August_2022.xlsx
+./data/uganda/raw/CPI_Composite_July_2022.xlsx
+./data/uganda/raw/CPI_Composite_August_2022.xlsx
+./data/uganda/raw/CPI_Composite_August_2022.xlsx

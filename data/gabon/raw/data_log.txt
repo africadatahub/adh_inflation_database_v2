@@ -1,0 +1,6 @@
+./data/gabon/raw/IHPC_decembre_2021.pdf
+./data/gabon/raw/IHPC_Publication_aout-2021.pdf
+./data/gabon/raw/IHPC_Publication_janvier-2022.pdf
+./data/gabon/raw/IHPC_Publication_mai_10062021.pdf
+./data/gabon/raw/IHPC_Publication_novembre_2021.pdf
+./data/gabon/raw/IHPC_Publication_octobre-2021.pdf

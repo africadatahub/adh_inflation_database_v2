@@ -1,0 +1,12 @@
+./data/niger/raw/IHPCB2014_Avril_2022.pdf
+./data/niger/raw/IHPCB2014_fevrier_2022.pdf
+./data/niger/raw/IHPCB2014_Janvier_2022.pdf
+./data/niger/raw/IHPCB2014_Juillet_2022.pdf
+./data/niger/raw/IHPCB2014_Mars_2022.pdf
+./data/niger/raw/IHPCB2014_aout_2022_VF.pdf
+./data/niger/raw/IHPCB2014_Avril_2022.pdf
+./data/niger/raw/IHPCB2014_aout_2022_VF.pdf
+./data/niger/raw/IHPCB2014_aout_2022_VF.pdf
+./data/niger/raw/IHPCB2014_aout_2022_VF.pdf
+./data/niger/raw/IHPCB2014_Avril_2022.pdf
+./data/niger/raw/IHPCB2014_fevrier_2022.pdf

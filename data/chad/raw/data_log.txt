@@ -1,0 +1,7 @@
+./data/chad/raw/Bulletin-INPC-02-2022.pdf
+./data/chad/raw/Bulletin-INPC-03-2022.pdf
+./data/chad/raw/Bulletin-INPC-04-2022.pdf
+./data/chad/raw/Bulletin-INPC-05-2022.pdf
+./data/chad/raw/Bulletin-INPC-06-2022.pdf
+./data/chad/raw/Bulletin-INPC-07-2022.pdf
+./data/chad/raw/Bulletin-INPC-05-2022.pdf
