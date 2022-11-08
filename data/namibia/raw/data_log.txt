@@ -2,3 +2,4 @@
 ./data/namibia/raw/Namibia_CPI_August_2022_Excel_Tables.xlsx
 ./data/namibia/raw/Namibia_CPI_August_2022_Excel_Tables.xlsx
 ./data/namibia/raw/Namibia_CPI_August_2022_Excel_Tables.xlsx
+./data/namibia/raw/Namibia_CPI_August_2022_Excel_Tables.xlsx

@@ -19,7 +19,8 @@ def prep(df):
         df[col] = df[col].str.replace(',','.')
         df[col] = df[col].str.replace('%','')
         df[col] = df[col].astype(float)
-    df = df.set_index(['Country','Indicator.Name','Indicator.Code'])
+    df = df.set_index(['Country','Indicator.Name'])
+    df = df.drop(columns = ['_id', 'Geography'])
     return df
 
 def tidy_up(country):
@@ -85,6 +86,7 @@ df_ckan_orig = pd.read_csv(file[0])
 df_ckan = df_ckan.set_index(['Country','Indicator.Name','Indicator.Code'])
 
 
+
 #%% find which countries we have data for
 
 countries = os.listdir('./data/')
@@ -100,6 +102,15 @@ for country in countries:
     #country = 'burkina_faso'
     df = pd.read_csv('./data/%s/csv/%s_output.csv'%(country,country))
     df = prep(df)
+    # update with latest dates
+    ckan_cols = df_ckan.columns.to_list()
+    ckan_cols = ckan_cols[-5:]
+    df_cols = df.columns.to_list()
+    df_cols = df_cols[-5:]
+    cols = [x for x in df_cols if x not in ckan_cols]
+    if cols:
+        for col in cols:
+            df_ckan[col] = ''
     tidy_up(country)
     df_ckan.update(df)
     
@@ -146,12 +157,14 @@ df_db.columns.values[15] = "Insurance"
 cols = df_db.columns.to_list()
 cols = cols[3:]
 for col in cols:
-    df_db[col] = df_db[col].astype(float)
-
+    try:
+        df_db[col] = df_db[col].astype(float)
+    except:
+        print('could not convert {} to float'.format(col))
 df_db.to_csv('./outputs/ckan/{}_reshaped_imf_database.csv'.format(today),index=False)
 
 #%% compare
-check = True
+check = False
 
 if check == True:
     indicators = df_ckan.loc[:,['Indicator.Name','Indicator.Code']].drop_duplicates()
@@ -201,7 +214,7 @@ if check == True:
             z_df['indicator'] = indicators[val]
             df_diff = pd.concat([df_diff,z_df])
 
-df_diff.to_csv('./outputs/ckan/{}_errors.csv'.format(today),index=False)
+    df_diff.to_csv('./outputs/ckan/{}_errors.csv'.format(today),index=False)
 #%%
 
 
