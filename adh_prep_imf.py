@@ -52,9 +52,9 @@ df_imf = df_imf[df_imf['Indicator Code'].isin(inds)]
 #countries_template = df_template['Country'].drop_duplicates().to_list()
 
 #df_template['Country'][df_template['Country'].str.contains('Ivoire',case=False)==True] = "Côte d'Ivoire"
-#df_template['Country'][df_template['Country'].str.contains('ncipe',case=False)==True] = "São Tomé and Príncipe, Dem. Rep. of"
+df_imf['Country Name'][df_imf['Country Name'].str.contains('São Tomé and Príncipe',case=False)==True] = "São Tomé and Príncipe"
 df_imf['Country Name'][df_imf['Country Name'].str.contains('Comoros',case=False)==True] = "Comoros"
-df_imf['Country Name'][df_imf['Country Name'].str.contains('Gambia',case=False)==True] = "Gambia"
+df_imf['Country Name'][df_imf['Country Name'].str.contains('Gambia',case=False)==True] = "The Gambia"
 df_imf['Country Name'][df_imf['Country Name'].str.contains('Ethiopia',case=False)==True] = "Ethiopia"
 df_imf['Country Name'][df_imf['Country Name'].str.contains('Egypt',case=False)==True] = "Egypt"
 df_imf['Country Name'][df_imf['Country Name'].str.contains('Equatorial',case=False)==True] = "Equatorial Guinea"

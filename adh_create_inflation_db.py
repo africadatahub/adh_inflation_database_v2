@@ -11,7 +11,7 @@ import glob, shutil, os
 import matplotlib.pyplot as plt
 
 
-def prep(df):
+def prep(df, c_bk):
     cols = df.columns.to_list()
     cols = cols[5:]
     df = df.astype(str)
@@ -19,6 +19,10 @@ def prep(df):
         df[col] = df[col].str.replace(',','.')
         df[col] = df[col].str.replace('%','')
         df[col] = df[col].astype(float)
+        df[col] = df[col].round(2)
+    df = df.set_index(['Geography'])
+    df.update(c_bk)
+    df = df.reset_index()
     df = df.set_index(['Country','Indicator.Name'])
     df = df.drop(columns = ['_id', 'Geography'])
     return df
@@ -83,37 +87,21 @@ file = glob.glob(data_path+'*.csv')
 #file = ['./outputs/ckan/bk/template.csv']
 df_ckan = pd.read_csv(file[0])
 df_ckan_orig = pd.read_csv(file[0])
+df_ckan = df_ckan[df_ckan['Indicator.Name']!='Insurance and Financial Services']
+
+# check names
+df_bk = pd.read_csv('{}/bk/africadata3.csv'.format(data_path))
+c_bk = df_bk.loc[:,['Country','iso_code']].drop_duplicates()
+df_ckan = df_ckan.set_index(['Geography'])
+c_bk = c_bk.rename(columns={'iso_code':'Geography'})
+
+c_bk = c_bk.set_index(['Geography'])
+df_ckan.update(c_bk)  
+df_ckan = df_ckan.reset_index()
+
+c_ckan = df_ckan.loc[:,['Country','Geography']].drop_duplicates()
 df_ckan = df_ckan.set_index(['Country','Indicator.Name','Indicator.Code'])
 
-
-
-#%% find which countries we have data for
-
-countries = os.listdir('./data/')
-countries.remove('imf')
-countries.remove('burundi')
-countries.remove('nigeria')
-countries.remove('codeList.csv')
-countries.remove('imf_country_codes.pdf')
-countries.remove('inflationdatacountrylist.csv')
-#countries = countries[0:5]
-# for each country, we want to get the output and clean up the data directory
-for country in countries:
-    #country = 'burkina_faso'
-    df = pd.read_csv('./data/%s/csv/%s_output.csv'%(country,country))
-    df = prep(df)
-    # update with latest dates
-    ckan_cols = df_ckan.columns.to_list()
-    ckan_cols = ckan_cols[-5:]
-    df_cols = df.columns.to_list()
-    df_cols = df_cols[-5:]
-    cols = [x for x in df_cols if x not in ckan_cols]
-    if cols:
-        for col in cols:
-            df_ckan[col] = ''
-    tidy_up(country)
-    df_ckan.update(df)
-    
 #%% now update with the latest IMF dataset
 
 file = glob.glob('./outputs/imf/*.xlsx')
@@ -126,12 +114,69 @@ cols = cols + res
 df_imf.columns = cols
 df_imf = df_imf.round(2)
 df_imf = df_imf.drop(columns=['Attribute'])
+c_imf = df_imf.Country.drop_duplicates().to_list()
 df_imf = df_imf.set_index(['Country','Indicator.Name','Indicator.Code'])
 cols = cols[-12:]
 # lets only update the last year
 df_imf = df_imf.loc[:,cols]
 
+
+#%% check names
+c_ckan = c_ckan.Country.drop_duplicates().to_list()
+filter_set = set(c_ckan)
+bad_names = [x for x in c_imf if x not in filter_set]
+
+if len(bad_names) > 0:
+    print('##################################')
+    print('There is an issue with names')
+    print('##################################')
+    print(' ')
+    print('press any key to exit')
+    ans = input('')
+    exit()
+del c_ckan, c_imf
+#%% get latest columns
+# update with latest dates
+ckan_cols = df_ckan.columns.to_list()
+ckan_cols = ckan_cols[-5:]
+df_cols = df_imf.columns.to_list()
+df_cols = df_cols[-5:]
+cols = [x for x in df_cols if x not in ckan_cols]
+if cols:
+    for col in cols:
+        df_ckan[col] = ''
+
+
+#%% update with latest IMF
 df_ckan.update(df_imf)  
+
+
+#%% find which countries we have data for
+
+countries = os.listdir('./data/')
+countries.remove('imf')
+#countries.remove('burundi')
+#countries.remove('nigeria')
+countries.remove('codeList.csv')
+countries.remove('imf_country_codes.pdf')
+countries.remove('inflationdatacountrylist.csv')
+#countries = countries[0:5]
+# for each country, we want to get the output and clean up the data directory
+for country in countries:
+    #country = 'burkina_faso'
+    df = pd.read_csv('./data/%s/csv/%s_output.csv'%(country,country))
+    df = prep(df,c_bk)
+    # update with latest dates
+    ckan_cols = [col for col in df_ckan.columns if '2022' in col]
+    df_cols = [col for col in df.columns if '2022' in col]
+    cols = [x for x in df_cols if x not in ckan_cols]
+
+    if cols:
+        for col in cols:
+            df_ckan[col] = ''
+    tidy_up(country)
+    df_ckan.update(df)
+   
 
 #%% save  
 df_ckan = df_ckan.reset_index()
@@ -140,6 +185,7 @@ df_ckan = df_ckan.reset_index()
 full_path = "C:\\Users\\heiko\\Documents\\Work\\OCL\\ADH\\Inflation\\adh_inflation_database_v2\\outputs\\ckan\\"
 full_path_bk = "C:\\Users\\heiko\\Documents\\Work\\OCL\\ADH\\Inflation\\adh_inflation_database_v2\\outputs\\ckan\\bk\\"
 #output_path = './outputs/{}/'.format(country)
+
 files = glob.glob(full_path+'*.csv')
 for file in files:
     shutil.move(file,full_path_bk)
@@ -153,7 +199,7 @@ df_db = pd.DataFrame()
 for country in countries:
     df_2 = reshape_db(df_ckan,country)
     df_db = pd.concat([df_db,df_2])
-df_db.columns.values[15] = "Insurance"
+#df_db.columns.values[15] = "Insurance"
 cols = df_db.columns.to_list()
 cols = cols[3:]
 for col in cols:

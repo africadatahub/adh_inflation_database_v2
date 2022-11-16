@@ -11,7 +11,7 @@ from datetime import date, datetime, timedelta
 import glob, shutil
 import re, os
 
-#%% functions and definitions
+# functions and definitions
 
 def get_last_date_of_month(year, month):
     """Return the last date of the month.
