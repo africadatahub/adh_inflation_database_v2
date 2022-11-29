@@ -41,7 +41,8 @@ def tidy_up(country):
     files = [item for item in files if not keep[1] in item]
     
     for file in files:
-        shutil.move(file,bk_folder)
+        filename = file.split('\\')[-1]
+        shutil.move(file,os.path.join(bk_folder, filename))
 
 def get_last_date_of_month(year, month):
     """Return the last date of the month.
@@ -188,7 +189,8 @@ full_path_bk = "C:\\Users\\heiko\\Documents\\Work\\OCL\\ADH\\Inflation\\adh_infl
 
 files = glob.glob(full_path+'*.csv')
 for file in files:
-    shutil.move(file,full_path_bk)
+    filename = file.split('\\')[-1]
+    shutil.move(file,os.path.join(full_path_bk, filename))
 today = date.today()
 df_ckan.to_csv('./outputs/ckan/{}_combined_imf_database.csv'.format(today),index=False)            
 

@@ -7,3 +7,5 @@
 ./data/tanzania/raw/CPI_Summary_062022.xlsx
 ./data/tanzania/raw/CPI_Summary_072022.xlsx
 ./data/tanzania/raw/CPI Summary_082022.xls
+./data/tanzania/raw/CPI_Summary_062022.xlsx
+./data/tanzania/raw/CPI_Summary_072022.xlsx
