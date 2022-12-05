@@ -16,6 +16,7 @@ def prep(df, c_bk):
     cols = cols[5:]
     df = df.astype(str)
     for col in cols:
+        #print(col)
         df[col] = df[col].str.replace(',','.')
         df[col] = df[col].str.replace('%','')
         df[col] = df[col].astype(float)
@@ -164,6 +165,7 @@ countries.remove('inflationdatacountrylist.csv')
 #countries = countries[0:5]
 # for each country, we want to get the output and clean up the data directory
 for country in countries:
+    print(country)
     #country = 'burkina_faso'
     df = pd.read_csv('./data/%s/csv/%s_output.csv'%(country,country))
     df = prep(df,c_bk)
