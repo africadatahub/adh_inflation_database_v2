@@ -93,6 +93,9 @@ def execute(data_path, country):
     df = tables[0]
     df = df.rename(columns={'Unnamed: 0':'Indicator.Name', 'Change rate (%)':'Percentage change'})
     df = df.drop([0])
+    df = df.iloc[:,[0,-1]]
+    
+    df = df.dropna()    
     df['Percentage change'] = df['Percentage change'].apply(lambda x:x.split(' ')[1])
     
     
@@ -101,9 +104,9 @@ def execute(data_path, country):
     # create csv_folder folder
     if not os.path.exists(csv_folder):
         os.makedirs(csv_folder)
-    df.to_csv('{}{}.csv'.format(csv_folder,data_path.split('raw/')[1]),index=False)
-    '''
-    df = df.iloc[:,[0,-1]]
+    df.to_csv('{}{}_raw.csv'.format(csv_folder,data_path.split('raw/')[1]),index=False)
+    
+    
     df.columns = ['Indicator.Name',last]
     
     # get template
@@ -115,11 +118,9 @@ def execute(data_path, country):
     
     # map all items
     df_1 = mapp_values(df,df_template)
-    # create outputs folder folder
-    if not os.path.exists('./outputs/%s'% country):
-        os.makedirs('./outputs/%s'% country)
-    df_1.to_csv('./outputs/{}/{}_{}.csv'.format(country,country,last),index=False)
-'''
+    
+    df_1.to_csv('{}{}.csv'.format(csv_folder,data_path.split('raw/')[1]),index=False)
+
 
 
 
@@ -149,6 +150,7 @@ else:
     files = pd.DataFrame()
     files['files'] = files_list
     file = files[~files.files.isin(logs)]
+    
 
     if len(file) != 0:
         print('Preparing %s data...'% country)
@@ -157,9 +159,13 @@ else:
         for i in range(len(file)):
             data_path = file.files.to_list()[i].split('.pdf')[0]
             print(data_path)
-            execute(data_path, country)
-            f.write(files_list[i])
-            f.write('\n')
+            try:
+                execute(data_path, country)
+                f.write(file.files.to_list()[i])
+                f.write('\n')
+            except:
+                print('failed %s'% data_path)
+            
         f.close()
     else:
         print('No new %s country data'% country)

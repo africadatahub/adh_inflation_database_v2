@@ -29,3 +29,11 @@
 ./data/togo/raw/INHPC_202208_VF.pdf
 ./data/togo/raw/INHPC_202209_VF.pdf
 ./data/togo/raw/INHPC_aout_-2021_VF.pdf
+./data/togo/raw/INHPC_202210_VF.pdf
+./data/togo/raw/INHPC_202211_VF.pdf
+./data/togo/raw/INHPC_202212_VF.pdf
+./data/togo/raw/INHPC_mai_2022_VF.pdf
+./data/togo/raw/INHPC_mars_2022_VF.pdf
+./data/togo/raw/INHPC_novembre_2021_VF.pdf
+./data/togo/raw/INHPC_octobre_2021_VF.pdf
+./data/togo/raw/INHPC_Septembre_2021_VF.pdf

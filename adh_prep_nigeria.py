@@ -169,9 +169,12 @@ else:
         for i in range(len(file)):
             data_path = file.files.to_list()[i]#.split('.xls')[0]
             print(data_path)
-            execute(data_path, country)
-            f.write(files_list[i])
-            f.write('\n')
+            try:
+                execute(data_path, country)
+                f.write(file.files.to_list()[i])
+                f.write('\n')
+            except:
+                print('failed %s'% data_path)
         f.close()
     else:
         print('No new %s country data'% country)

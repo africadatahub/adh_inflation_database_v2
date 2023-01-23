@@ -1,0 +1,14 @@
+Indicator.Name,Indicator.Code,January,February,March,April,May,June,July,August,September,October,November,December
+"Consumer Price Index, All items",PCPI_PC_CP_A_PT,15.6,15.7,15.92,16.82,17.71,18.6,19.64,20.52,20.77,21.09,21.47,21.34
+Food and non-alcoholic beverages,PCPIF_PC_CP_A_PT,17.08,17.07,17.16,18.32,19.44,20.54,21.94,23.04,23.26,23.64,24.03,23.66
+"Alcoholic Beverages, Tobacco, and Narcotics",PCPIFBT_PC_CP_A_PT,14.09,14.51,14.96,15.61,16.35,17.09,17.91,18.75,18.62,18.39,18.48,18.1
+Clothing and footwear,PCPIA_PC_CP_A_PT,15.4,15.71,16.08,16.49,16.92,17.33,17.73,18.21,17.84,17.57,17.66,17.55
+"Housing, Water, Electricity, Gas and Other Fuels",PCPIH_PC_CP_A_PT,11.45,11.82,12.32,13.08,13.85,14.61,15.28,15.92,16.42,16.84,17.33,17.52
+"Furnishings, household equipment and routine household maintenance",PCPIHO_PC_CP_A_PT,14.64,14.81,15.07,15.34,15.66,16.0,16.33,16.78,16.78,16.85,16.94,17.03
+Health,PCPIM_PC_CP_A_PT,14.84,14.74,14.72,14.96,15.26,15.6,15.95,16.39,16.94,17.44,17.85,18.22
+Transport,PCPIT_PC_CP_A_PT,15.08,15.12,15.37,15.85,16.39,16.97,17.58,18.24,18.74,19.0,19.53,20.16
+Communication,PCPIEC_PC_CP_A_PT,10.58,10.62,10.72,10.84,11.0,11.2,11.43,11.63,11.76,11.88,11.54,11.22
+Recreation and culture,PCPIR_PC_CP_A_PT,13.82,14.16,14.47,14.82,15.23,15.63,16.04,16.5,16.93,17.32,16.61,15.74
+Education,PCPIED_PC_CP_A_PT,13.21,13.48,13.87,14.4,14.96,15.49,16.01,16.49,16.88,17.26,17.88,18.42
+Restaurants and hotels,PCPIRE_PC_CP_A_PT,13.39,13.7,14.05,14.41,14.74,15.06,15.39,15.76,16.26,16.49,16.7,17.12
+Miscellaneous goods and services,PCPIO_PC_CP_A_PT,14.36,14.57,14.83,15.13,15.49,15.89,16.3,16.74,17.24,17.66,18.1,18.61

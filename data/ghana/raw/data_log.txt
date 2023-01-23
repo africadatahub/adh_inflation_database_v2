@@ -13,6 +13,7 @@
 ./data/ghana/raw/Bulletin_ CPI Nov 2021.pdf
 ./data/ghana/raw/Bulletin_ CPI October 2021.pdf
 ./data/ghana/raw/Bulletin_ March CPI 2022 .pdf
-./data/ghana/raw/Bulletin _ CPI April 2022.pdf
-./data/ghana/raw/Bulletin _ CPI April 2022.pdf
-./data/ghana/raw/Bulletin _ CPI April 2022.pdf
+./data/ghana/raw/Bulletin _ October CPI 2022.pdf
+./data/ghana/raw/Bulleting_CPI December 2022.pdf
+./data/ghana/raw/Bulleting_November CPI 2022.pdf
+./data/ghana/raw/Bulletin_ CPI August 2022.pdf

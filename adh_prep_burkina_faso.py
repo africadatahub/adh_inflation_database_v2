@@ -74,6 +74,28 @@ def mapp_values(df,template):
     return df
 
 #%% 
+
+
+def get_template(df):
+    # pattern: nans occur in sentences, so each sentence needs to be joined on either side of the nan
+    # loop through indicator name to find nans
+    template = []
+    
+    df['Indicator.Name'] = df['Indicator.Name'].fillna('NAN')
+    
+    indic = df['Indicator.Name'].to_list()
+    
+    for i in range(len(indic)):
+        if indic[i]!='NAN':
+            template.append(i)
+        else:
+            template.append('NAN')
+    for k in range(len(template)):
+        if template[k] == 'NAN':
+            template[k] = template[k-1]
+            template[k+1] = template[k-1]
+    return template
+
 def translate_divisions(df):
     divs = df['Indicator.Name'].to_list()
     translator= Translator(from_lang="french",to_lang="english")
@@ -111,7 +133,14 @@ def execute(data_path, country):
     tables = tabula.read_pdf("{}.pdf".format(data_path), pages=(1), stream=True)
 
     df = tables[0]
-    df = df.drop([0,1,2,3,4])
+    
+    # remove everything above Indice Global
+    row_drop = range(df[df['Unnamed: 0']=='INDICE GLOBAL'].index.values[0])
+    rows_drop = []
+    for i in row_drop:
+        rows_drop.append(i)
+    
+    df = df.drop(rows_drop)
     df = df.iloc[:,[0,-1]]
     # remove rows with all nans
     df = df[~df.isnull().all(axis=1)]
@@ -123,7 +152,7 @@ def execute(data_path, country):
 
     # labels
     df_labels = df.iloc[:,[0]]
-    template = [0,1,1,1,2,2,2,3,4,4,4,5,5,5,6,7,8,9,10,11,12]
+    template = get_template(df)#[0,1,1,1,2,2,2,3,4,4,4,5,5,5,6,7,8,9,10,11,12]
     df['template'] = template
     df = df.drop(columns=['Indicator.Name'])
     df = df.dropna()
@@ -185,9 +214,13 @@ else:
         for i in range(len(file)):
             data_path = file.files.to_list()[i].split('.pdf')[0]
             print(data_path)
-            execute(data_path, country)
-            f.write(files_list[i])
-            f.write('\n')
+            try:
+                execute(data_path, country)
+                f.write(file.files.to_list()[i])
+                f.write('\n')
+            except:
+                print('failed %s'% data_path)
+            
         f.close()
     else:
         print('No new %s country data'% country)

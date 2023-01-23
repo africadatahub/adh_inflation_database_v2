@@ -1,1 +1,3 @@
 ./data/zambia/raw/Vol-233-of-2022-The-Monthly-August.pdf
+./data/zambia/raw/Vol-236-of-2022-The-Monthly-November.pdf
+./data/zambia/raw/Vol-237-of-2022-The-Monthly-December.pdf

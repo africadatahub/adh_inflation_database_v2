@@ -1,14 +1,15 @@
-Indicator.Name,Unnamed: 1,Unnamed: 2,Percentage change
-Non-food Inflation rate 56.9,,172.48,33.6
-"Alcoholic Beverages, Tobacco & Narcotics 3.7",,163.21,23.7
-Clothing and footwear 8.1,,155.45,26.2
-"Housing, water, electricity, gas and other fuels 10.2",,228.15,46.7
-"Furnishings, household equipment and routine household ma3i.n2tenance",,170.4,44.7
-Health 0.7,,140.56,16.2
-Transport 10.1,,200.56,45.7
-Information and communication 3.6,,133.81,15.0
-"Recreation, sport and culture 3.5",,160.61,36.4
-Education services 6.5,,116.21,7.2
-Restaurants and accommodation services 4.6,,141.78,22.4
-Insurance and financial services 0.2,,116.6,5.4
-"Personal care, social protection and miscellaneous goods an2d. 4services",,163.59,36.0
+Indicator.Name,Indicator.Code,2022-08-31
+"Consumer Price Index, All items",PCPI_PC_CP_A_PT,
+Food and non-alcoholic beverages,PCPIF_PC_CP_A_PT,
+"Alcoholic Beverages, Tobacco, and Narcotics",PCPIFBT_PC_CP_A_PT,23.7
+Clothing and footwear,PCPIA_PC_CP_A_PT,26.2
+"Housing, Water, Electricity, Gas and Other Fuels",PCPIH_PC_CP_A_PT,46.7
+"Furnishings, household equipment and routine household maintenance",PCPIHO_PC_CP_A_PT,44.7
+Health,PCPIM_PC_CP_A_PT,16.2
+Transport,PCPIT_PC_CP_A_PT,45.7
+Communication,PCPIEC_PC_CP_A_PT,15.0
+Recreation and culture,PCPIR_PC_CP_A_PT,36.4
+Education,PCPIED_PC_CP_A_PT,7.2
+Restaurants and hotels,PCPIRE_PC_CP_A_PT,22.4
+Insurance and Financial Services,,5.4
+Miscellaneous goods and services,PCPIO_PC_CP_A_PT,36.0

@@ -65,7 +65,7 @@ def get_last_date_of_month(year, month):
 
 def reshape_db(df,country):
     
-    df = df.drop(columns=['Indicator.Name','_id'])
+    df = df.drop(columns=['Indicator.Name','_id','index'])
     df = df[df.Country == country]
     country = df.Country.drop_duplicates().to_list()
     iso = df.Geography.drop_duplicates().to_list()
@@ -106,7 +106,7 @@ df_ckan = df_ckan.set_index(['Country','Indicator.Name','Indicator.Code'])
 
 #%% now update with the latest IMF dataset
 
-file = glob.glob('./outputs/imf/*.xlsx')
+file  = glob.glob('./outputs/imf/*.xlsx')
 df_imf = pd.read_excel(file[0])
 cols = df_imf.columns.to_list()
 res = cols[4:]

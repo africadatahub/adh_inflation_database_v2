@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Nov 15 15:52:31 2022
-
+This is a debugging script for when you want to compare data for a specific country between IMF and what we have gathered
 @author: heiko
 """
 

@@ -1,0 +1,16 @@
+Indicator.Name,Indicator.Code,2022-10-31
+"Consumer Price Index, All items",PCPI_PC_CP_A_PT,32.98
+Food and non-alcoholic beverages,PCPIF_PC_CP_A_PT,Unnamed: 7
+Food and non-alcoholic beverages,PCPIF_PC_CP_A_PT,40.14
+"Alcoholic Beverages, Tobacco, and Narcotics",PCPIFBT_PC_CP_A_PT,7.96
+Clothing and footwear,PCPIA_PC_CP_A_PT,13.69
+"Housing, Water, Electricity, Gas and Other Fuels",PCPIH_PC_CP_A_PT,
+"Furnishings, household equipment and routine household maintenance",PCPIHO_PC_CP_A_PT,45.87
+Health,PCPIM_PC_CP_A_PT,25.7
+Transport,PCPIT_PC_CP_A_PT,42.13
+Communication,PCPIEC_PC_CP_A_PT,11.99
+Recreation and culture,PCPIR_PC_CP_A_PT,43.97
+Education,PCPIED_PC_CP_A_PT,3.82
+Restaurants and hotels,PCPIRE_PC_CP_A_PT,48.8
+Insurance and Financial Services,,
+Miscellaneous goods and services,PCPIO_PC_CP_A_PT,27.77

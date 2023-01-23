@@ -1,0 +1,20 @@
+Indicator.Name,Indicator.Code,original_language,2022-12-31
+"Consumer Price Index, All items",PCPI_PC_CP_A_PT,INDICE GLOBAL,"3,1"
+Food and non-alcoholic beverages,PCPIF_PC_CP_A_PT,"I- Produits alimentaires et boissons non
+alcoolisées","3,9"
+"Alcoholic Beverages, Tobacco, and Narcotics",PCPIFBT_PC_CP_A_PT,"II- Boissons alcoolisées, tabac et stupé-
+fiants","9,0"
+Clothing and footwear,PCPIA_PC_CP_A_PT,"III- Articles d’habillement et
+chaussures","2,6"
+"Housing, Water, Electricity, Gas and Other Fuels",PCPIH_PC_CP_A_PT,"IV- Logement, eau, électricité, gaz et
+autres combustibles","3,5"
+"Furnishings, household equipment and routine household maintenance",PCPIHO_PC_CP_A_PT,"V- Meubles, articles de ménage et
+entretien courant du foyer","1,6"
+Health,PCPIM_PC_CP_A_PT,VI- Santé,"3,8"
+Transport,PCPIT_PC_CP_A_PT,VII- Transports,"0,9"
+Communication,PCPIEC_PC_CP_A_PT,VIII- Communications,"1,6"
+Recreation and culture,PCPIR_PC_CP_A_PT,IX- Loisirs et culture,"3,3"
+Education,PCPIED_PC_CP_A_PT,X - Enseignement,"-0,1"
+Restaurants and hotels,PCPIRE_PC_CP_A_PT,XI- Restaurants et hôtels,"1,8"
+Insurance and Financial Services,,,
+Miscellaneous goods and services,PCPIO_PC_CP_A_PT,XII- Biens et services divers,"3,5"

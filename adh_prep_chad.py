@@ -121,22 +121,45 @@ def execute(data_path, country):
     '''
     tables = tabula.read_pdf("{}.pdf".format(data_path), pages=(2), stream=True)
     if len(tables)==2:
-        df = tables[1]
+        # want table with more columns
+        df_1 = tables[0]
+        df_2 = tables[1]
+        c1 = len(df_1.axes[1])
+        c2 = len(df_2.axes[1])
+        if c1 > c2:
+            df = tables[0]
+        else:
+            df = tables[1]
+            
         df = df.drop([0,1])
     else:
         df = tables[0]
+        '''
         if data_path in ['./data/chad/raw/Bulletin-INPC-04-2022','./data/chad/raw/Bulletin-INPC-05-2022']:
             drop_rows = range(0,len(df)-29)
         else:
             drop_rows = range(0,len(df)-30)
-        df = df.drop(drop_rows) 
+        df = df.drop(drop_rows)
+        '''
     '''
     if len(df) == 36:
         df = df.drop([0,1,2,3,4,5])
     else:    
         df = df.drop([0,1])
     ''' 
+
     df = df.iloc[:,[1,-1]]
+    
+    # remove everything above Produits
+    df = df.T.reset_index().T
+    row_drop = range(df[df[0].str.contains('Produits')].index.values[0])
+    rows_drop = []
+    for i in row_drop:
+        rows_drop.append(i)
+    
+    df = df.drop(rows_drop)
+    
+    
     # remove rows with all nans
     df = df[~df.isnull().all(axis=1)]
     month = int(data_path[30:32])

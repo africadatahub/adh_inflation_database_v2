@@ -10,3 +10,8 @@
 ./data/niger/raw/IHPCB2014_aout_2022_VF.pdf
 ./data/niger/raw/IHPCB2014_Avril_2022.pdf
 ./data/niger/raw/IHPCB2014_fevrier_2022.pdf
+./data/niger/raw/IHPCB2014_Juin_2022.pdf
+./data/niger/raw/IHPCB2014_Mai_2022.pdf
+./data/niger/raw/IHPCB2014_sept_2022_VF.pdf
+./data/niger/raw/IHPCB2014_nov_2022_Vf.pdf
+./data/niger/raw/IHPC_Decembre_2022_VF.pdf

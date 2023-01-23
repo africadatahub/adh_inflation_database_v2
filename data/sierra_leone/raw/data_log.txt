@@ -1,2 +1,6 @@
 ./data/sierra_leone/raw/July_2022_cpi_press_release.pdf
 ./data/sierra_leone/raw/June_2022_CPI_Press_Release.pdf
+./data/sierra_leone/raw/August_2022_CPI_Press_Release.pdf
+./data/sierra_leone/raw/November_2022_CPI_Press_Release.pdf
+./data/sierra_leone/raw/October_2022_cpi_Press_Release.pdf
+./data/sierra_leone/raw/September_2022-CPI-Press-Release.pdf

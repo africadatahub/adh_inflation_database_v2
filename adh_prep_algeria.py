@@ -196,3 +196,4 @@ def template(country):
 
 #template(country)
 
+#data_path = 'C:/Users/heiko/Documents/Work/OCL/ADH/Inflation/adh_inflation_database_v2/data/algeria/raw/ipc_septembre2022'

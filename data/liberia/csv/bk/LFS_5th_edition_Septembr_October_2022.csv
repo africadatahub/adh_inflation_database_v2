@@ -1,0 +1,15 @@
+Indicator.Name,Indicator.Code,Jan-22,Feb-22,Mar-22,Apr-22,May-22,Jun-22,Jul-22,Aug-22,Sep-22,Oct-22
+"Consumer Price Index, All items",PCPI_PC_CP_A_PT,6.55,7.64,9.51,6.26,6.23,6.32,6.48,7.06,7.23,9.12
+Food and non-alcoholic beverages,PCPIF_PC_CP_A_PT,-6.79,-1.57,2.58,-2.39,1.17,-1.99,-0.98,-3.85,-5.12,3.08
+"Alcoholic Beverages, Tobacco, and Narcotics",PCPIFBT_PC_CP_A_PT,-1.29,-0.47,-3.06,-0.04,-0.55,0.89,4.57,10.16,9.59,5.48
+Clothing and footwear,PCPIA_PC_CP_A_PT,-0.48,-0.71,-10.79,-15.7,-8.36,-7.05,-1.51,-1.27,-0.07,0.37
+"Housing, Water, Electricity, Gas and Other Fuels",PCPIH_PC_CP_A_PT,0.06,-0.53,-0.91,3.57,3.08,6.93,4.51,14.9,14.33,14.72
+"Furnishings, household equipment and routine household maintenance",PCPIHO_PC_CP_A_PT,-3.47,-4.8,-6.58,-8.3,-12.54,-11.99,-8.42,0.21,0.2,2.68
+Health,PCPIM_PC_CP_A_PT,18.73,12.44,12.49,11.68,7.13,4.73,-4.52,-4.99,-3.14,0.56
+Transport,PCPIT_PC_CP_A_PT,0.53,0.2,22.77,12.95,13.38,39.52,48.71,48.09,47.89,46.28
+Communication,PCPIEC_PC_CP_A_PT,5.02,5.45,5.14,4.84,6.19,2.95,-9.45,-10.04,-9.43,-6.7
+Recreation and culture,PCPIR_PC_CP_A_PT,2.11,1.28,0.62,-1.82,1.03,-2.71,-2.67,-5.93,-5.79,-2.77
+Education,PCPIED_PC_CP_A_PT,23.19,23.19,23.19,23.19,23.19,23.19,6.07,6.03,6.11,6.08
+Restaurants and hotels,PCPIRE_PC_CP_A_PT,33.68,32.52,27.4,21.66,16.18,11.39,18.4,20.56,22.35,15.15
+Insurance and Financial Services,,,,,,,,,,,
+Miscellaneous goods and services,PCPIO_PC_CP_A_PT,-2.51,-3.06,-2.42,-0.28,2.93,6.22,7.87,14.44,13.06,13.7

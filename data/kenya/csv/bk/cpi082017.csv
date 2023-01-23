@@ -1,0 +1,15 @@
+Indicator.Name,Indicator.Code,2017-08-31
+"Consumer Price Index, All items",PCPI_PC_CP_A_PT,8.04
+Food and non-alcoholic beverages,PCPIF_PC_CP_A_PT,13.57
+"Alcoholic Beverages, Tobacco, and Narcotics",PCPIFBT_PC_CP_A_PT,
+Clothing and footwear,PCPIA_PC_CP_A_PT,3.8
+"Housing, Water, Electricity, Gas and Other Fuels",PCPIH_PC_CP_A_PT,
+"Furnishings, household equipment and routine household maintenance",PCPIHO_PC_CP_A_PT,
+Health,PCPIM_PC_CP_A_PT,3.35
+Transport,PCPIT_PC_CP_A_PT,2.26
+Communication,PCPIEC_PC_CP_A_PT,0.34
+Recreation and culture,PCPIR_PC_CP_A_PT,1.16
+Education,PCPIED_PC_CP_A_PT,2.83
+Restaurants and hotels,PCPIRE_PC_CP_A_PT,5.51
+Insurance and Financial Services,,
+Miscellaneous goods and services,PCPIO_PC_CP_A_PT,3.5

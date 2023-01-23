@@ -103,7 +103,7 @@ def translate_divisions(df):
 
 
 
-def execute(data_path, country):
+def execute_old(data_path, country):
     #codes = pd.read_csv('./data/codeList.csv')
     # get template
     if '_' in country:
@@ -161,7 +161,63 @@ def execute(data_path, country):
     df_1.to_csv('./outputs/{}/{}_{}.csv'.format(country,country,last),index=False)
     '''
 
+def execute(data_path, country):
+    if '_' in country:
+        c = country.split('_')
+        c = [i.capitalize() for i in c]
+        country2 = ' '.join(c)
+    else:
+        country2 = country.capitalize()
 
+    tables = tabula.read_pdf("{}.pdf".format(data_path), pages=(1), lattice=True)
+    df = tables[4]
+    month = [val for key, val in months.items() if key.lower() in data_path.lower()][0]
+    year = re.search(r'.*([1-3][0-9]{3})',data_path).group(1) # [1-3] = num between 1-3, [0-9]{3} = num 0-9 repeat 3 times
+    year = int(year)
+    last = get_last_date_of_month(year, month)
+    
+    # clean data
+    df = df.loc[:,['Unnamed: 1','Unnamed: 14']]
+    df.columns = ['Indicator.Name',last]
+
+    # remove everything above first entry
+    sub = 'INDICE' 
+    x = df['Indicator.Name'].str.find(sub) # some have a space, so let's find the substring 
+    row_drop = range(x[x==0].index.values[0])
+    rows_drop = []
+    for i in row_drop:
+        rows_drop.append(i)
+    
+    df = df.drop(rows_drop)
+    
+    # translation
+    try:
+        df = translate_from_template(df,country)
+    except:        
+        df = translate_divisions(df)
+        # save this in csv folder
+        csv_folder = './data/%s/csv/'% country
+        # create csv_folder folder
+        if not os.path.exists(csv_folder):
+            os.makedirs(csv_folder)
+        df_translated = df.drop(columns=[last])
+        df_translated.to_csv(csv_folder+'translation_template.csv',index=False)
+
+    # save this in csv folder
+    csv_folder = './data/%s/csv/'% country
+    # create csv_folder folder
+    if not os.path.exists(csv_folder):
+        os.makedirs(csv_folder)
+    df.to_csv('{}{}_raw.csv'.format(csv_folder,data_path.split('raw/')[1]),index=False)
+    
+    # map all items
+    file = './outputs/ckan/bk/template.csv'
+    df_template = pd.read_csv(file)
+    df_template = df_template[df_template['Country']==country2]
+    df_template = df_template.iloc[:,[0,1,2,3,4,-2,-1]]
+    df_1 = mapp_values(df,df_template)
+    df_1.to_csv('{}{}.csv'.format(csv_folder,data_path.split('raw/')[1]),index=False)
+    
 #%% check if there are new files
 country = 'niger'
 base_data_path ='./data/%s/raw/'% country
@@ -196,9 +252,13 @@ else:
         for i in range(len(file)):
             data_path = file.files.to_list()[i].split('.pdf')[0]
             print(data_path)
-            execute(data_path, country)
-            f.write(files_list[i])
-            f.write('\n')
+            try:
+                execute(data_path, country)
+                f.write(file.files.to_list()[i])
+                f.write('\n')
+            except:
+                print('failed %s'% data_path)
+            
         f.close()
     else:
         print('No new %s country data'% country)
