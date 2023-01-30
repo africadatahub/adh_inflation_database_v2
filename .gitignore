@@ -1,4 +1,6 @@
-
+#spyder project settings
 .~*
+.spyderproject
+.spyproject
 .spyproject*
 .spyproject/config/*
