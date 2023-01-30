@@ -5,3 +5,4 @@
 .spyproject*
 .spyproject/config/*
 .spyproject/config/backups/workspace.ini.bak
+.spyproject\
