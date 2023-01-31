@@ -10,3 +10,4 @@
 ./data/uganda/raw/CPI_Composite-_November_2022.xlsx
 ./data/uganda/raw/CPI_Composite_August_2022.xlsx
 ./data/uganda/raw/CPI_Composite-_November_2022.xlsx
+./data/uganda/raw/CPI_Composite-_November_2022.xlsx

@@ -7,3 +7,4 @@
 ./data/senegal/raw/IHPC_06_221.pdf
 ./data/senegal/raw/IHPC_07_22.pdf
 ./data/senegal/raw/IHPC_08_22 2.pdf
+./data/senegal/raw/139-FLASH IHPC_NOV_2022 1.pdf

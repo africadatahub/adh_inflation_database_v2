@@ -5,3 +5,4 @@
 ./data/rwanda/raw/CPI Publication _English_November 2022.pdf
 ./data/rwanda/raw/CPI Publication _English_October 2022.pdf
 ./data/rwanda/raw/CPI Publication _English_September  2022_1_0.pdf
+./data/rwanda/raw/CPI Publication _English_June  2022.pdf

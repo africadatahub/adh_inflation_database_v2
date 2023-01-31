@@ -26,7 +26,7 @@ for country in countries:
 
 #files = ['adh_prep_imf.py']+files
 #%%
-if auto == True:
+if auto == False:
     for file in files:
         try:
             print(' ')
