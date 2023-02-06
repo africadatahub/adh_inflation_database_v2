@@ -17,7 +17,7 @@ df = pd.read_csv(files[0])
 
 #%% create filters
 
-cols = [col for col in df.columns if '2022' in col]
+cols = [col for col in df.columns if '202' in col]
 cols = ['Country', 'Indicator.Name'] + cols
 df = df.loc[:,cols]
 df_1 = pd.melt(df, id_vars=['Country', 'Indicator.Name'],var_name='date')

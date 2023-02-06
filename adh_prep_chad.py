@@ -11,6 +11,7 @@ from datetime import datetime, timedelta
 import glob, shutil
 import re, os
 from translate import Translator
+import numpy as np
 
 # functions and definitions
 
@@ -74,10 +75,33 @@ def mapp_values(df,template):
     df = df.round(2)
     return df
 
+def get_template(df):
+    # pattern: nans occur in sentences, so each sentence needs to be joined on either side of the nan
+    # loop through indicator name to find nans
+    template = []
+    
+    df['Indicator.Name'] = df['Indicator.Name'].fillna('NAN')
+    
+    indic = df['Indicator.Name'].to_list()
+    
+    for i in range(len(indic)):
+        if indic[i]!='NAN':
+            template.append(i)
+        else:
+            template.append('NAN')
+    for k in range(len(template)):
+        if template[k] == 'NAN':
+            template[k] = template[k-1]
+            template[k+1] = template[k-1]
+    return template
+
+
+
 #%% 
 def translate_from_template(df,country):
     csv_folder = './data/%s/csv/translation_template.csv'% country
     df_2 = pd.read_csv(csv_folder)
+    df_2 = df_2.loc[:,['original_language','Indicator.Name']]
     for i in range(len(df)):
         df['Indicator.Name'][df['Indicator.Name'].str.contains(df_2.iloc[i,0][0:20],case=False)==True] = df_2.iloc[i,0]
     df = df.rename(columns={'Indicator.Name':'original_language'})
@@ -85,7 +109,7 @@ def translate_from_template(df,country):
     return df
     
 
-def translate_divisions(df):
+def translate_divisions(df,country):
     divs = df['Indicator.Name'].to_list()
     translator= Translator(from_lang="french",to_lang="english")
     divs2 = []
@@ -100,8 +124,8 @@ def translate_divisions(df):
                 divs2.append(divs[i])
     df = df.rename(columns={'Indicator.Name': 'original_language'})            
     df['Indicator.Name'] = divs2
-    #translation = translator.translate("Guten Morgen")
-    #divs2 = [translator.translate(x) for x in divs]
+    csv_folder = './data/%s/csv/translation_template.csv'% country
+    df.to_csv(csv_folder, index=False)
     return df
 
 def execute(data_path, country):
@@ -113,12 +137,12 @@ def execute(data_path, country):
         country2 = ' '.join(c)
     else:
         country2 = country.capitalize()
-    '''    
+        
     file = './outputs/ckan/bk/template.csv'
     df_template = pd.read_csv(file)
     df_template = df_template[df_template['Country']==country2]
     df_template = df_template.iloc[:,[0,1,2,3,4,-2,-1]]
-    '''
+    
     tables = tabula.read_pdf("{}.pdf".format(data_path), pages=(2), stream=True)
     if len(tables)==2:
         # want table with more columns
@@ -152,7 +176,9 @@ def execute(data_path, country):
     
     # remove everything above Produits
     df = df.T.reset_index().T
-    row_drop = range(df[df[0].str.contains('Produits')].index.values[0])
+    df = df.reset_index(drop=True)
+    #df = df.fillna('NAN')
+    row_drop = range(df[df[0].str.contains('Produits', na=False)].index.values[0])
     rows_drop = []
     for i in row_drop:
         rows_drop.append(i)
@@ -169,7 +195,8 @@ def execute(data_path, country):
 
     # labels
     df_labels = df.iloc[:,[0]]
-    template = [0,0,0,1,2,3,4,5,6,7,7,7,8,8,8,9,9,9,10,10,10,11,12,13,14,15,16,17,18]
+    template = get_template(df)
+    #template = [0,0,0,1,2,3,4,5,6,7,7,7,8,8,8,9,9,9,10,10,10,11,12,13,14,15,16,17,18]
     df['template'] = template
     df = df.drop(columns=['Indicator.Name'])
     df = df.dropna()
@@ -186,25 +213,27 @@ def execute(data_path, country):
     try:
         df = translate_from_template(df,country)
     except:        
-        df = translate_divisions(df)
+        df = translate_divisions(df,country)
 
     df['Indicator.Name'][df['Indicator.Name'].str.contains('Teaching',case=False)==True] = "Education"
-
+    df['Indicator.Name'][df['Indicator.Name'].str.contains('Shoes',case=False)==True] = "Clothing"
+    df['Indicator.Name'][df['Indicator.Name'].str.contains('fuels',case=False)==True] = "Housing"
+    df['Indicator.Name'][df['Indicator.Name'].str.contains('Non-Alcoholic:',case=False)==True] = "Food"
     # save this in csv folder
     csv_folder = './data/%s/csv/'% country
     # create csv_folder folder
     if not os.path.exists(csv_folder):
         os.makedirs(csv_folder)
-    df.to_csv('{}{}.csv'.format(csv_folder,data_path.split('raw/')[1]),index=False)
-'''
+    df.to_csv('{}{}_raw.csv'.format(csv_folder,data_path.split('raw/')[1]),index=False)
+
     df = df.loc[:,['Indicator.Name',last]]
     # map all items
     df_1 = mapp_values(df,df_template)
     # create outputs folder folder
     if not os.path.exists('./outputs/%s'% country):
         os.makedirs('./outputs/%s'% country)
-    df_1.to_csv('./outputs/{}/{}_{}.csv'.format(country,country,last),index=False)
-'''
+    df_1.to_csv('{}{}.csv'.format(csv_folder,data_path.split('raw/')[1]),index=False)
+
 
 
 #%% check if there are new files
@@ -243,11 +272,11 @@ else:
             print(data_path)
             try:
                 execute(data_path, country)
-                f.write(files_list[i])
+                f.write(file.files.to_list()[i])
                 f.write('\n')
             except:
-                print('{} failed'.format(data_path))
-                failed.append(data_path)
+                print('failed %s'% data_path)
+            
         f.close()
     else:
         print('No new %s country data'% country)

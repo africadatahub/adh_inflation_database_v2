@@ -1,14 +1,15 @@
-original_language,2022-03-31,Indicator.Name
-"Produits alimentaires et boissons non 4 418 93,9 97,5 96,5 alcoolisées","7,3",Food and non-alcoholic beverages
-"Boissons alcoolisées et 165 110,7 114,3 114,9 tabac","5,5",and
-"Articles d'habillement 799 93,1 97,2 99,5 et chaussures","4,7",799
-"Logement, eau, gaz, électricité et autres 2 599 131,7 130,5 129,6 combustibles","-1,0","Housing water, electricity, gas and other fuels"
-"Meubles, articles de ménage et entretien 297 110,0 113,9 112,9 courant de la maison","1,5","05. Household goods, domestic appliances and routine home maintenance"
-"Santé 186 102,1 102,2 103,0","0,8",102.1
-"Transports 761 115,3 115,8 118,9","5,4",115.3
-"Communications 248 108,1 108,1 108,1","0,0",108
-"Loisirs et culture 134 106,8 107,5 107,5","2,5",cultivated
-"Enseignement 109 186,6 187,4 187,4","0,4","186,6"
-"Restaurants et hôtels 126 103,4 103,4 98,2","1,3",hotels
-"Biens et services divers 159 90,0 91,6 96,1","0,7",Miscellaneous Goods & Services: 8.6%
-"Indice général 10 000 107,8 109,7 109,4","3,5",10
+Indicator.Name,Indicator.Code,2022-03-31
+"Consumer Price Index, All items",PCPI_PC_CP_A_PT,"3,5"
+Food and non-alcoholic beverages,PCPIF_PC_CP_A_PT,
+"Alcoholic Beverages, Tobacco, and Narcotics",PCPIFBT_PC_CP_A_PT,
+Clothing and footwear,PCPIA_PC_CP_A_PT,
+"Housing, Water, Electricity, Gas and Other Fuels",PCPIH_PC_CP_A_PT,
+"Furnishings, household equipment and routine household maintenance",PCPIHO_PC_CP_A_PT,
+Health,PCPIM_PC_CP_A_PT,"0,8"
+Transport,PCPIT_PC_CP_A_PT,"5,4"
+Communication,PCPIEC_PC_CP_A_PT,"0,0"
+Recreation and culture,PCPIR_PC_CP_A_PT,"2,5"
+Education,PCPIED_PC_CP_A_PT,"0,4"
+Restaurants and hotels,PCPIRE_PC_CP_A_PT,"1,3"
+Insurance and Financial Services,,
+Miscellaneous goods and services,PCPIO_PC_CP_A_PT,"0,7"

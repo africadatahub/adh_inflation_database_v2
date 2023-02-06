@@ -12,8 +12,19 @@ auto = False
 countries = os.listdir('./data/')
 #countries.remove('ckan')
 countries.remove('imf')
-countries.remove('nigeria')
-countries.remove('chad') # do manually
+#countries.remove('nigeria')
+#countries.remove('chad') 
+
+# do manually
+countries.remove('burundi')
+countries.remove('eswatini')
+countries.remove('malawi')
+countries.remove('senegal')
+countries.remove('sierra_leone')
+countries.remove('togo')
+countries.remove('zambia')
+countries.remove('zimbabwe')
+
 countries.remove('codeList.csv')
 countries.remove('imf_country_codes.pdf')
 countries.remove('inflationdatacountrylist.csv')
@@ -26,7 +37,7 @@ for country in countries:
 
 #files = ['adh_prep_imf.py']+files
 #%%
-if auto == False:
+if auto == True:
     for file in files:
         try:
             print(' ')
@@ -39,7 +50,7 @@ if auto == False:
             print('failed to execute {}'.format(file))
             failed.append(file)
 else:
-    i = 9
+    i = 3
     file = files[i]
     try:
         print(' ')

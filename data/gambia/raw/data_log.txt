@@ -10,3 +10,6 @@
 ./data/gambia/raw/Consumer Price Index - December 2022 Publication.pdf
 ./data/gambia/raw/Consumer Price Index - February 2022 Publication.pdf
 ./data/gambia/raw/Consumer Price Index - January 2022 Publication (2).pdf
+./data/gambia/raw/Consumer Price Index - April 2022 Publication.pdf
+./data/gambia/raw/Consumer Price Index - August 2022 Publication.pdf
+./data/gambia/raw/Consumer Price Index - December 2022 Publication.pdf

@@ -108,7 +108,8 @@ def execute(data_path, country):
     df_template = df_template[df_template['Country']==country2]
     df_template = df_template.iloc[:,[0,1,2,3,4,-2,-1]]
 
-    tables = tabula.read_pdf("{}.pdf".format(data_path), pages=(6), lattice=True)
+    tables = tabula.read_pdf("{}.pdf".format(data_path), pages=(8), lattice=True)
+    df = tables[1]
     return tables
 
 
@@ -146,9 +147,12 @@ else:
         for i in range(len(file)):
             data_path = file.files.to_list()[i].split('.pdf')[0]
             print(data_path)
-            execute(data_path, country)
-            f.write(files_list[i])
-            f.write('\n')
+            try:
+                execute(data_path, country)
+                f.write(file.files.to_list()[i])
+                f.write('\n')
+            except:
+                print('failed %s'% data_path)
         f.close()
     else:
         print('No new %s country data'% country)

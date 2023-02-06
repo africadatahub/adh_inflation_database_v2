@@ -1,14 +1,15 @@
-original_language,2022-04-30,Indicator.Name
-Produits alimentaires et boissons non alcoolisées,"8,2",Food and non-alcoholic beverages
-Boissons alcoolisées et tabac,"3,8",Alcoholic beverages and tobacco
-Articles d'habillement et chaussures,"4,7",Clothing and footwear
-"Logement, eau, gaz, électricité et autres combustibles","0,3","Housing water, electricity, gas and other fuels"
-"Meubles, articles de ménage et entretien courant de la maison","4,8","05. Household goods, domestic appliances and routine home maintenance"
-Santé,"0,0",Healthcare
-Transports,"1,9",Transport
-Communications,"0,0",Communications
-Loisirs et culture,"3,7",Leisure and culture
-Enseignement,"0,4",Education
-Restaurants et hôtels,"4,5",Restaurants and hotels
-Biens et services divers,"-2,8",MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  22 HOURS 03 MINUTES 05 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
-Indice général,"4,0",MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  22 HOURS 03 MINUTES 05 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
+Indicator.Name,Indicator.Code,2022-04-30
+"Consumer Price Index, All items",PCPI_PC_CP_A_PT,"4,0"
+Food and non-alcoholic beverages,PCPIF_PC_CP_A_PT,
+"Alcoholic Beverages, Tobacco, and Narcotics",PCPIFBT_PC_CP_A_PT,"3,8"
+Clothing and footwear,PCPIA_PC_CP_A_PT,
+"Housing, Water, Electricity, Gas and Other Fuels",PCPIH_PC_CP_A_PT,
+"Furnishings, household equipment and routine household maintenance",PCPIHO_PC_CP_A_PT,
+Health,PCPIM_PC_CP_A_PT,"0,0"
+Transport,PCPIT_PC_CP_A_PT,"1,9"
+Communication,PCPIEC_PC_CP_A_PT,"0,0"
+Recreation and culture,PCPIR_PC_CP_A_PT,"3,7"
+Education,PCPIED_PC_CP_A_PT,"0,4"
+Restaurants and hotels,PCPIRE_PC_CP_A_PT,"4,5"
+Insurance and Financial Services,,
+Miscellaneous goods and services,PCPIO_PC_CP_A_PT,"-2,8"

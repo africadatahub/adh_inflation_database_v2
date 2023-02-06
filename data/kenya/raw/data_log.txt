@@ -15,3 +15,4 @@
 ./data/kenya/raw/cpi112017.pdf
 ./data/kenya/raw/cpi122017.pdf
 ./data/kenya/raw/cpi062017.pdf
+./data/kenya/raw/January-2023-CPI-.pdf
