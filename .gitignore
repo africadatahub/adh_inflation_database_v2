@@ -8,5 +8,5 @@
 .spyproject\
 blog
 adh_proper*
-outputs/ckan/*long.csv
+#outputs/ckan/*long.csv
 outputs/ckan/bk
