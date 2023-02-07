@@ -213,6 +213,15 @@ for col in cols:
         print('could not convert {} to float'.format(col))
 df_db.to_csv('./outputs/ckan/{}_reshaped_imf_database.csv'.format(today),index=False)
 
+#%% power_BI
+
+df = df_ckan.drop(columns=['Indicator.Code','index','_id'])
+df = df.rename(columns={'Indicator.Name':'indicator','Country':'country','Geography':'iso_code'})
+df_2 = pd.melt(df,id_vars=['country','indicator','iso_code'], var_name=['date'])
+df_2 = df_2.dropna()
+df_2['value'] = df_2['value'].astype(float)
+df_2.to_csv('./outputs/ckan/%s_long.csv'%(files[0].split('\\')[1].split('.')[0]),index=False)
+
 #%% compare
 check = False
 

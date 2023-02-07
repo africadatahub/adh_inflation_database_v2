@@ -87,9 +87,29 @@ def execute(data_path, country):
     year = int(year)
     last = get_last_date_of_month(year, month)
     #codes = pd.read_csv('./data/codeList.csv')
-    df = pd.read_excel("{}.xlsx".format(data_path),skiprows= 20, nrows= 14)
+    
+    
+    #df = pd.read_excel("{}.xlsx".format(data_path),skiprows= 20, nrows= 14)
+    df = pd.read_excel("{}.xlsx".format(data_path))
     df = df.iloc[:,[1,-1]]
     df.columns=['Indicator.Name',last]
+    
+    # drop all rows before Annual% Change
+    row_drop = range(df[df['Indicator.Name']=='Annual% Change'].index.values[0])
+    rows_drop = []
+    for i in row_drop:
+        rows_drop.append(i)
+    rows_drop.append(i+1)
+    df = df.drop(rows_drop)
+    df = df.reset_index(drop=True)
+    # keep all rows above Monthly % Change NB: the spacing could change from one month to the next, which will break this.
+    row_keep = df[df['Indicator.Name']=='Monthly % Change'].index.values[0]
+    df = df.iloc[0:row_keep,:]
+    
+    # remove rows with all nans
+    df = df[~df.isnull().all(axis=1)]
+    
+    
     df['Indicator.Name'] = df['Indicator.Name'].str.replace('Headline','All')
     #df = df[df['Indicator.Name']!='Insurnace and Financial Services']
     # save this in csv folder
@@ -133,12 +153,20 @@ else:
         for i in range(len(file)):
             data_path = file.files.to_list()[i].split('.xlsx')[0]
             print(data_path)
-            execute(data_path, country)
-            f.write(files_list[i])
-            f.write('\n')
+            try:
+                execute(data_path, country)
+                f.write(file.files.to_list()[i])
+                f.write('\n')
+            except:
+                print('failed %s'% data_path)
         f.close()
     else:
         print('No new %s country data'% country)
+
+
+
+
+
         
 #%%
 def template(country):

@@ -6,3 +6,7 @@
 .spyproject/config/*
 .spyproject/config/backups/workspace.ini.bak
 .spyproject\
+blog
+adh_proper*
+outputs/ckan/*long.csv
+outputs/ckan/bk

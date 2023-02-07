@@ -50,8 +50,9 @@ if auto == True:
             print('failed to execute {}'.format(file))
             failed.append(file)
 else:
-    i = 3
+    i = 19
     file = files[i]
+
     try:
         print(' ')
         print("running: {}".format(file))
