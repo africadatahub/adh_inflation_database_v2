@@ -219,8 +219,10 @@ df = df_ckan.drop(columns=['Indicator.Code','index','_id'])
 df = df.rename(columns={'Indicator.Name':'indicator','Country':'country','Geography':'iso_code'})
 df_2 = pd.melt(df,id_vars=['country','indicator','iso_code'], var_name=['date'])
 df_2 = df_2.dropna()
+
 df_2['value'] = df_2['value'].astype(float)
-df_2.to_csv('./outputs/ckan/power_BI.csv'%(files[0].split('\\')[1].split('.')[0]),index=False)
+
+df_2.to_csv('./outputs/ckan/power_BI.csv',index=False)
 
 #%% compare
 check = False
