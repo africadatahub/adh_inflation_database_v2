@@ -8,3 +8,4 @@
 ./data/south_africa/raw/P0141September2022_Tables.pdf
 ./data/south_africa/raw/P0141December2022_Tables.pdf
 ./data/south_africa/raw/P0141November2022_Tables.pdf
+./data/south_africa/raw/P0141January2023_Tables.pdf

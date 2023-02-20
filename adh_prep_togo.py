@@ -101,7 +101,25 @@ def translate_divisions(df):
     df['Indicator.Name'] = divs2
     return df
 
-
+def get_template(df):
+    # pattern: nans occur in sentences, so each sentence needs to be joined on either side of the nan
+    # loop through indicator name to find nans
+    template = []
+    
+    df['Indicator.Name'] = df['Indicator.Name'].fillna('NAN')
+    
+    indic = df['Indicator.Name'].to_list()
+    
+    for i in range(len(indic)):
+        if indic[i]!='NAN':
+            template.append(i)
+        else:
+            template.append('NAN')
+    for k in range(len(template)):
+        if template[k] == 'NAN':
+            template[k] = template[k-1]
+            template[k+1] = template[k-1]
+    return template
 
 def execute(data_path, country):
     #codes = pd.read_csv('./data/codeList.csv')
@@ -115,12 +133,6 @@ def execute(data_path, country):
 
     tables = tabula.read_pdf("{}.pdf".format(data_path), pages=(1), stream=True)
     df = tables[0]
-    # save this in csv folder
-    csv_folder = './data/%s/csv/'% country
-    # create csv_folder folder
-    if not os.path.exists(csv_folder):
-        os.makedirs(csv_folder)
-    df.to_csv('{}{}.csv'.format(csv_folder,data_path.split('raw/')[1]),index=False)
     
     try:
         month = [val for key, val in months.items() if key.lower() in data_path.lower()][0]
@@ -132,17 +144,79 @@ def execute(data_path, country):
         year = int(data_path.split('_')[1][0:4])
         df_1 = df.iloc[[1,2,11,12,13,14,15,16,17,18,19,20,21],[0,1,-1]]
         last = get_last_date_of_month(year, month)
-        df_1[last] = 0
-        df_1.to_csv('{}cleaned_{}.csv'.format(csv_folder,data_path.split('raw/')[1]),index=False)
-        return
+        #df_1[last] = 0
+        #df_1.to_csv('{}cleaned_{}.csv'.format(csv_folder,data_path.split('raw/')[1]),index=False)
+        #return
    
     file = './outputs/ckan/bk/template.csv'
     df_template = pd.read_csv(file)
     df_template = df_template[df_template['Country']==country2]
     df_template = df_template.iloc[:,[0,1,2,3,4,-2,-1]]
 
-
+    # remove everything above Indice Global
+    row_drop = range(df[df['Unnamed: 1']=='INDICE GLOBAL'].index.values[0])
+    rows_drop = []
+    for i in row_drop:
+        rows_drop.append(i)
     
+    df = df.drop(rows_drop)
+    df = df.iloc[:,[0,1,-1]]
+    
+    # remove rows with all nans
+    df = df[~df.isnull().all(axis=1)]
+    df.columns = ['cats','Indicator.Name',last]
+    df = df.loc[:,['Indicator.Name',last,'cats']]
+    
+    df.loc[df['Indicator.Name']=='INDICE GLOBAL', 'cats'] = "O"
+    
+    
+    # labels
+    df_labels = df.loc[:,['Indicator.Name']]
+    template = get_template(df)#[0,1,1,1,2,2,2,3,4,4,4,5,5,5,6,7,8,9,10,11,12]
+    df['template'] = template
+    df = df.drop(columns=['Indicator.Name'])
+    df = df.dropna()
+    df_labels['template'] = template
+    df_labels = df_labels.dropna()
+    df_labels = df_labels.groupby(['template'])['Indicator.Name'].apply(' '.join).reset_index()
+
+    df = pd.merge(df,df_labels,how='left',on='template')
+    df = df.drop(columns=['template','cats'])
+    df = df.loc[:,['Indicator.Name',last]]
+    df[last] = df[last].apply(lambda x: x.split(' ')[-1])
+
+
+    # translation
+    try:
+        df = translate_from_template(df,country)
+    except:        
+        df = translate_divisions(df)
+        # save this in csv folder
+        csv_folder = './data/%s/csv/'% country
+        # create csv_folder folder
+        if not os.path.exists(csv_folder):
+            os.makedirs(csv_folder)
+        df_translated = df.drop(columns=[last])
+        df_translated.to_csv(csv_folder+'translation_template.csv',index=False)
+    
+    df['Indicator.Name'][df['Indicator.Name'].str.contains('Teaching',case=False)==True] = "Education"
+
+    # save this in csv folder
+    csv_folder = './data/%s/csv/'% country
+    # create csv_folder folder
+    if not os.path.exists(csv_folder):
+        os.makedirs(csv_folder)
+    df.to_csv('{}{}_raw.csv'.format(csv_folder,data_path.split('raw/')[1]),index=False)
+    
+    # map all items
+    df_1 = mapp_values(df,df_template)
+     
+    df_1.to_csv('{}cleaned_{}.csv'.format(csv_folder,data_path.split('raw/')[1]),index=False)
+    
+    
+    
+    
+'''    
     try:
         # clean data
         if len(df) == 31:
@@ -193,6 +267,8 @@ def execute(data_path, country):
     except:
         print('failed to clean {}'.format(data_path.split('raw/')[1]))
         df.to_csv('{}failed_{}.csv'.format(csv_folder,data_path.split('raw/')[1]),index=False)
+'''
+
 
 #%% check if there are new files
 country = 'togo'

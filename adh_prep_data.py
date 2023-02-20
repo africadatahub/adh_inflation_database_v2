@@ -8,7 +8,7 @@ A control script to run all of the prep data scripts
 """
 import os
 
-auto = False
+auto = True
 countries = os.listdir('./data/')
 #countries.remove('ckan')
 countries.remove('imf')

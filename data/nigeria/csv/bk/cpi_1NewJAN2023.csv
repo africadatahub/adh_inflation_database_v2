@@ -1,0 +1,14 @@
+Indicator.Name,Indicator.Code,January
+"Consumer Price Index, All items",PCPI_PC_CP_A_PT,21.82
+Food and non-alcoholic beverages,PCPIF_PC_CP_A_PT,24.21
+"Alcoholic Beverages, Tobacco, and Narcotics",PCPIFBT_PC_CP_A_PT,17.76
+Clothing and footwear,PCPIA_PC_CP_A_PT,17.48
+"Housing, Water, Electricity, Gas and Other Fuels",PCPIH_PC_CP_A_PT,17.92
+"Furnishings, household equipment and routine household maintenance",PCPIHO_PC_CP_A_PT,17.19
+Health,PCPIM_PC_CP_A_PT,18.62
+Transport,PCPIT_PC_CP_A_PT,21.02
+Communication,PCPIEC_PC_CP_A_PT,10.89
+Recreation and culture,PCPIR_PC_CP_A_PT,14.99
+Education,PCPIED_PC_CP_A_PT,19.02
+Restaurants and hotels,PCPIRE_PC_CP_A_PT,17.56
+Miscellaneous goods and services,PCPIO_PC_CP_A_PT,19.11

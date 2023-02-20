@@ -1,0 +1,15 @@
+Indicator.Name,Indicator.Code,original_language,2023-01-31
+"Consumer Price Index, All items",PCPI_PC_CP_A_PT,INDICE GLOBAL,"7,4"
+Food and non-alcoholic beverages,PCPIF_PC_CP_A_PT,Produits alimentaires et boissons non alcoolisées,"5,6"
+"Alcoholic Beverages, Tobacco, and Narcotics",PCPIFBT_PC_CP_A_PT,"Boissons alcoolisées, tabacs et stupéfiants","7,0"
+Clothing and footwear,PCPIA_PC_CP_A_PT,Articles d'habillement et chaussures,"6,9"
+"Housing, Water, Electricity, Gas and Other Fuels",PCPIH_PC_CP_A_PT,"Logement, eau, gaz, électricité et autres combustibles","9,1"
+"Furnishings, household equipment and routine household maintenance",PCPIHO_PC_CP_A_PT,"Meubles, articles de ménage et entretien courant du foyer","9,0"
+Health,PCPIM_PC_CP_A_PT,Santé,"1,0"
+Transport,PCPIT_PC_CP_A_PT,Transports,"18,4"
+Communication,PCPIEC_PC_CP_A_PT,Communication,"-0,2"
+Recreation and culture,PCPIR_PC_CP_A_PT,Loisirs et culture,"7,0"
+Education,PCPIED_PC_CP_A_PT,Enseignement,"2,6"
+Restaurants and hotels,PCPIRE_PC_CP_A_PT,Restaurants et hôtels,"10,3"
+Insurance and Financial Services,,,
+Miscellaneous goods and services,PCPIO_PC_CP_A_PT,Biens et services divers,"4,9"

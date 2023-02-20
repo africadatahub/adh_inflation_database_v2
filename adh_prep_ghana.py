@@ -72,7 +72,7 @@ def mapp_values(df,template):
     df = df.round(2)
     return df
 
-#%% execute
+# execute
 
 def execute(data_path, country):
     month = [val for key, val in months.items() if key in data_path][0]

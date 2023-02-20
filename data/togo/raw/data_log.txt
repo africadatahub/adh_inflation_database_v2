@@ -37,3 +37,4 @@
 ./data/togo/raw/INHPC_novembre_2021_VF.pdf
 ./data/togo/raw/INHPC_octobre_2021_VF.pdf
 ./data/togo/raw/INHPC_Septembre_2021_VF.pdf
+./data/togo/raw/INHPC_202301_VF.pdf

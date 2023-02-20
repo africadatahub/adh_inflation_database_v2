@@ -96,7 +96,8 @@ def execute(data_path, country):
         country2 = country.capitalize()
     
     #month = [val for key, val in months.items() if key.lower() in data_path][0]
-    month = 10
+    month = data_path.split('/')[4][8:11]
+    month = months[month.lower().capitalize()]
     year = re.search(r'.*([1-3][0-9]{3})',data_path).group(1) # [1-3] = num between 1-3, [0-9]{3} = num 0-9 repeat 3 times
     year = int(year)
     last = get_last_date_of_month(year, month)
@@ -105,12 +106,16 @@ def execute(data_path, country):
     df = df.drop(0)
     df = df.drop(columns=['Unnamed: 22'])
     
-    df_2021 = df.iloc[312:324,:]
-    df_2022 = df.iloc[324:,:]
-    df_2021 = prep(df_2021)
+    #df_2021 = df.iloc[312:324,:]
+    df_2022 = df.iloc[324:336,:]
+    df_2023 = df.iloc[336:,:]
+    #df_2021 = prep(df_2021)
     df_2022 = prep(df_2022)
-    df_2021 = df_2021.loc[:,df_2022.columns]
-    df = ((df_2022-df_2021)/df_2021)*100
+    df_2023 = prep(df_2023)
+    #df_2021 = df_2021.loc[:,df_2022.columns]
+    df_2022 = df_2022.loc[:,df_2023.columns]
+    #df = ((df_2022-df_2021)/df_2021)*100
+    df = ((df_2023-df_2022)/df_2022)*100
     df = df.reset_index()
     df = df.rename(columns={'index':'Indicator.Name'})
     df = df.drop([1,2,3,4])
