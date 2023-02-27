@@ -1,3 +1,4 @@
 ./data/nigeria/raw/cpi_1NewOCT2022.xlsx
 ./data/nigeria/raw/cpi_1NewDEC2022.xlsx
 ./data/nigeria/raw/cpi_1NewNOV2022.xlsx
+./data/nigeria/raw/cpi_1NewJAN2023.xlsx
