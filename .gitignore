@@ -1,5 +1,6 @@
 #spyder project settings
 .~*
+.pylint.d
 .spyderproject
 .spyproject
 .spyproject*
