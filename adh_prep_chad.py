@@ -4,7 +4,6 @@ Created on Mon Sep 26 14:10:42 2022
 
 @author: heiko
 """
-
 import tabula
 import pandas as pd
 from datetime import datetime, timedelta
@@ -12,6 +11,9 @@ import glob, shutil
 import re, os
 from translate import Translator
 import numpy as np
+from fuzzywuzzy import process
+from fuzzywuzzy import fuzz
+
 
 # functions and definitions
 
@@ -98,12 +100,23 @@ def get_template(df):
 
 
 #%% 
+
 def translate_from_template(df,country):
     csv_folder = './data/%s/csv/translation_template.csv'% country
     df_2 = pd.read_csv(csv_folder)
     df_2 = df_2.loc[:,['original_language','Indicator.Name']]
-    for i in range(len(df)):
-        df['Indicator.Name'][df['Indicator.Name'].str.contains(df_2.iloc[i,0][0:20],case=False)==True] = df_2.iloc[i,0]
+    
+    threshold = 80
+    for k in range(len(df)):
+        #print(df.iloc[k,0],' | ', df_2.iloc[k,0])
+        #resp_match =  process.extractOne(df.iloc[k,0] ,df_2['original_language'])
+        resp = fuzz.WRatio(df.iloc[k,0],df_2.iloc[k,0])
+        #print(resp)
+        if resp >= threshold:
+            df.iloc[k,0] = df_2.iloc[k,0]
+    
+    #for i in range(len(df)):
+    #    df['Indicator.Name'][df['Indicator.Name'].str.contains(df_2.iloc[i,0][0:20],case=False)==True] = df_2.iloc[i,0]
     df = df.rename(columns={'Indicator.Name':'original_language'})
     df = pd.merge(df,df_2, how = 'left',on='original_language')
     return df

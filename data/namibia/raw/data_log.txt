@@ -10,3 +10,4 @@
 ./data/namibia/raw/Namibia_CPI_December_2022_Excel_Tables1.xlsx
 ./data/namibia/raw/Namibia_CPI_November_2022_Excel_Tables.xlsx
 ./data/namibia/raw/Namibia_CPI_September_2022_Excel_Tables.xlsx
+./data/namibia/raw/Namibia_CPI_January_2023_Excel_Tables1.xlsx

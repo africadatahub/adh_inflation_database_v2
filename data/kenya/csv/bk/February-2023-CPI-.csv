@@ -1,0 +1,15 @@
+Indicator.Name,Indicator.Code,2023-02-28
+"Consumer Price Index, All items",PCPI_PC_CP_A_PT,9.2
+Food and non-alcoholic beverages,PCPIF_PC_CP_A_PT,13.3
+"Alcoholic Beverages, Tobacco, and Narcotics",PCPIFBT_PC_CP_A_PT,8.5
+Clothing and footwear,PCPIA_PC_CP_A_PT,3.1
+"Housing, Water, Electricity, Gas and Other Fuels",PCPIH_PC_CP_A_PT,7.6
+"Furnishings, household equipment and routine household maintenance",PCPIHO_PC_CP_A_PT,8.8
+Health,PCPIM_PC_CP_A_PT,2.2
+Transport,PCPIT_PC_CP_A_PT,12.9
+Communication,PCPIEC_PC_CP_A_PT,1.2
+Recreation and culture,PCPIR_PC_CP_A_PT,6.2
+Education,PCPIED_PC_CP_A_PT,2.5
+Restaurants and hotels,PCPIRE_PC_CP_A_PT,6.7
+Insurance and Financial Services,,1.3
+Miscellaneous goods and services,PCPIO_PC_CP_A_PT,7.8

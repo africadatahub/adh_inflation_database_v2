@@ -146,7 +146,7 @@ df_cols = df_cols[-5:]
 cols = [x for x in df_cols if x not in ckan_cols]
 if cols:
     for col in cols:
-        df_ckan[col] = ''
+        df_ckan[col] = np.nan
 
 
 #%% update with latest IMF
@@ -170,8 +170,8 @@ for country in countries:
     df = pd.read_csv('./data/%s/csv/%s_output.csv'%(country,country))
     df = prep(df,c_bk)
     # update with latest dates
-    ckan_cols = [col for col in df_ckan.columns if '2022' in col]
-    df_cols = [col for col in df.columns if '2022' in col]
+    ckan_cols = [col for col in df_ckan.columns if '202' in col]
+    df_cols = [col for col in df.columns if '202' in col]
     cols = [x for x in df_cols if x not in ckan_cols]
 
     if cols:
