@@ -19,3 +19,4 @@
 ./data/tanzania/raw/CPI_Summary_092022.xls
 ./data/tanzania/raw/CPI_Summary_112022.xls
 ./data/tanzania/raw/CPI_Summary_012023.xls
+./data/tanzania/raw/CPI Summary_022023.xls

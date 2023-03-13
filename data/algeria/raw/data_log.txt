@@ -1,0 +1,2 @@
+./data/algeria/raw/i.ipc-aout_2022.pdf
+./data/algeria/raw/I.IPC_jan_2023.pdf

@@ -94,11 +94,17 @@ def execute(data_path, country):
     col = get_first_date_of_month(year, month)
     #codes = pd.read_csv('./data/codeList.csv')
     #df = pd.read_excel(data_path,skiprows= 20, nrows= 14)
-    df = pd.read_excel(data_path,sheet_name='{}_REBASED SERIES'.format(str(year)),nrows=17)
+    try:
+        df = pd.read_excel(data_path,sheet_name='{}_REBASED SERIES'.format(str(year)),nrows=17)
+    except:
+        df = pd.read_excel(data_path,sheet_name='{}_REBASED SERIES '.format(str(year)),nrows=17)
     df = df.iloc[:,[1,month+3]]
     df.columns = ['Indicator.Name',year]
     #df.columns=['Indicator.Name',last]
-    df_prev = pd.read_excel(data_path,sheet_name='{}_REBASED SERIES'.format(str(year-1)),nrows=17)
+    try:
+        df_prev = pd.read_excel(data_path,sheet_name='{}_REBASED SERIES'.format(str(year-1)),nrows=17)
+    except:
+        df_prev = pd.read_excel(data_path,sheet_name='{}_REBASED SERIES '.format(str(year-1)),nrows=17)
     df_prev = df_prev.iloc[:,[1,month+3]]
     df_prev.columns = ['Indicator.Name',year-1]
     df = pd.merge(df_prev,df,how='left',on = 'Indicator.Name')
