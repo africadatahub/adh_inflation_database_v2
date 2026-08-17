@@ -10,7 +10,11 @@ Steps
 
 Set up a local directory for C:\......\adh_inflation_database_v2.
 
+The easiest way to setup the correct directory structure is the use the download zip option that can be accessed if you click on the green Code button
+
 On you local drive setup sub-directories that are exactly the same us in this repo https://github.com/africadatahub/adh_inflation_database_v2
+
+The easiest way to mai
 
 Here are the sub-directories for \adh_inflation_database_v2
 C:\.....\adh_inflation_database_v2\data
