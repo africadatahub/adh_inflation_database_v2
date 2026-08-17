@@ -46,6 +46,17 @@ For countries where a py script is used for the update, such as Namibia, you wou
 
 Step 5
 Combine the individual country updates with the  "CPI_day-month-year hr-min-sec_NewtimeSeries_africa.xlsx". This done by running the adh_create_inflation_db.py script in \adh_inflation_database_v2\
+
+Change the following paths in adh_create_inflation_db.py so that they are correct in your local environment
+Line 33  
+bk_folder = "C:\\Users\\heiko\\Documents\\Work\\OCL\\ADH\\Inflation\\adh_inflation_database_v2\\data\\%s\\csv\\bk\\"% country
+Line 39 
+files = glob.glob("C:\\Users\\heiko\\Documents\\Work\\OCL\\ADH\\Inflation\\adh_inflation_database_v2\\data\\%s\\csv\\*.csv"% country)
+Line 188
+full_path = "C:\\Users\\heiko\\Documents\\Work\\OCL\\ADH\\Inflation\\adh_inflation_database_v2\\outputs\\ckan\\"
+Line 189
+full_path_bk = "C:\\Users\\heiko\\Documents\\Work\\OCL\\ADH\\Inflation\\adh_inflation_database_v2\\outputs\\ckan\\bk\\"
+
 This will create 3 output files in \adh_inflation_database_v2\outputs\ckan\: 1) year-month-day_combined_imf_database.csv, 2) year-month-day_reshaped_imf_database.csv, and 3) power_BI.csv.  All 3 datasets found here contain the same data, but in different shapes to suit different applications.
 
 Step 6
