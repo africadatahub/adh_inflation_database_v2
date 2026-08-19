@@ -1,0 +1,14 @@
+Indicator.Name;Indicator.Code
+All Items;PCPI_PC_CP_A_PT
+Clothing and footwear;PCPIA_PC_CP_A_PT
+Communication;PCPIEC_PC_CP_A_PT
+Education;PCPIED_PC_CP_A_PT
+Food and non-alcoholic beverages;PCPIF_PC_CP_A_PT
+Alcoholic beverages, tobacco and narcotics;PCPIFBT_PC_CP_A_PT
+Housing, water, electricity, gas and other fuels;PCPIH_PC_CP_A_PT
+Furnishings, household equipment and routine household maintenance;PCPIHO_PC_CP_A_PT
+Health;PCPIM_PC_CP_A_PT
+Miscellaneous goods and services;PCPIO_PC_CP_A_PT
+Recreation and culture;PCPIR_PC_CP_A_PT
+Restaurants and hotels;PCPIRE_PC_CP_A_PT
+Transport;PCPIT_PC_CP_A_PT
